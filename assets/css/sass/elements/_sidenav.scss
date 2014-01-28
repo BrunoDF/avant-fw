@@ -50,7 +50,7 @@
         
         & > li {
             a {
-                font-size: 1.2em;
+                font-size: $font_size - 0.2em;
                 padding: 0 $padding_big+10px; 
             }
         }

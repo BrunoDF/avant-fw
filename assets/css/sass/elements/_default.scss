@@ -38,6 +38,14 @@ label {
     margin: 0 0 $margin_x_small 0;
 }
 
+p {
+    margin: 0;
+    
+    & + p {
+        margin: $margin_small 0 0 0;   
+    }
+}
+
 ul {
     list-style-type: none;
     margin: 0;

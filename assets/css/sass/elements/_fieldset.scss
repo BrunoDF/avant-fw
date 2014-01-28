@@ -1,0 +1,54 @@
+////////////////////////////////////////////
+// Fieldset
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+fieldset {
+    background: $fieldset_bg_color;
+    border: 0;
+    font-size: 1.4em;
+    overflow: hidden;
+    padding: $fieldset_legend_height+10px $padding_small $padding_small $padding_small;
+    position: relative;
+    
+    @include border_radius;
+    
+    legend {
+        background: $fieldset_legend_bg_color;
+        color: $fieldset_legend_color;   
+        font-size: 1.3em;
+        font-weight: 700;
+        left: 0;
+        line-height: $fieldset_legend_height;
+        padding: 0 $padding_small;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

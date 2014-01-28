@@ -7,7 +7,7 @@
 // Small - Default
 ////////////////////////////////////////////
 *, *::after, *::before {
-    box-sizing: border-box;
+    @include border_box;
 }
 
 .wrapper {

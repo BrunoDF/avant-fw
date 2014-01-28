@@ -25,6 +25,8 @@ fieldset {
         position: absolute;
         top: 0;
         width: 100%;
+        
+        @include border_radius(4px 4px 0 0);
     }
 }
 

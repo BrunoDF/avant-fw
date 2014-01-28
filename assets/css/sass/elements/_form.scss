@@ -39,7 +39,7 @@ input[type="text"], input[type="password"], select {
 }
 
 select {
-    padding: 0 $padding_small;
+    padding: $select_vert_padding $padding_x_small;
     
     @include linear-gradient(to bottom, top, $select_gradient_color_1, $select_gradient_color_2);
     

@@ -2,18 +2,14 @@
 // Mixins
 ////////////////////////////////////////////
 
+
 ////////////////////////////////////////////
-// Clear Fix
+// Border Radius
 ////////////////////////////////////////////
-@mixin clear_fix {
-    &::after {
-        content: ".";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-    }
+@mixin border_box {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 
@@ -30,18 +26,6 @@
 
 
 ////////////////////////////////////////////
-// Linear Gradient
-////////////////////////////////////////////
-@mixin linear_gradient($dir, $dir_prefix, $color1, $color2) {
-    background-image: linear-gradient($dir, $color1, $color2);
-    background-image: -webkit-linear-gradient($dir_prefix, $color1, $color2);
-    background-image: -moz-linear-gradient($dir_prefix, $color1, $color2);
-    background-image: -ms-linear-gradient($dir_prefix, $color1, $color2);
-    background-image: -o-linear-gradient($dir_prefix, $color1, $color2);
-}
-
-
-////////////////////////////////////////////
 // Box Shadow
 ////////////////////////////////////////////
 @mixin box_shadow($val) {
@@ -50,6 +34,33 @@
     -moz-box-shadow: $val;
     -ms-box-shadow: $val;
     -o-box-shadow: $val;
+}
+
+
+////////////////////////////////////////////
+// Clear Fix
+////////////////////////////////////////////
+@mixin clear_fix {
+    &::after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}
+
+
+////////////////////////////////////////////
+// Linear Gradient
+////////////////////////////////////////////
+@mixin linear_gradient($dir, $dir_prefix, $color1, $color2) {
+    background-image: linear-gradient($dir, $color1, $color2);
+    background-image: -webkit-linear-gradient($dir_prefix, $color1, $color2);
+    background-image: -moz-linear-gradient($dir_prefix, $color1, $color2);
+    background-image: -ms-linear-gradient($dir_prefix, $color1, $color2);
+    background-image: -o-linear-gradient($dir_prefix, $color1, $color2);
 }
 
 

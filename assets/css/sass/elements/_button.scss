@@ -1,0 +1,79 @@
+////////////////////////////////////////////
+// Buttons
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.btn {
+    display: inline-block;
+    line-height: $btn_height;
+    outline: none;
+    padding: 0 $padding_medium;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    
+    @include border_radius;
+    
+    &.btn_link {
+        border: 1px solid $link_btn_border_color;
+        border-left: 0;
+        color: $link_btn_color;
+        
+        &:hover {
+            background: $link_btn_hover_bg_color;
+            color: $link_btn_hover_color;
+        }
+    }
+    
+    &.btn_std {
+        border: 1px solid $btn_border_color;
+        border-left: 0;
+        color: $btn_color;
+        
+        @include linear_gradient(to bottom, top, #fff, #dfdfdf 130%);
+        
+        &:hover {
+            color: $btn_hover_color;
+            @include linear_gradient(to bottom, top, #fff, darken(#dfdfdf, 10%) 130%);
+        }
+    }
+    
+    &.btn_main {
+        border: 1px solid $btn_main_border_color;
+        border-left: 0;
+        color: $btn_main_color;
+        
+        @include linear_gradient(to bottom, top, #6495ed, #5078c3 130%);
+        
+        &:hover {
+            color: $btn_main_hover_color;
+            @include linear_gradient(to bottom, top, #6495ed, darken(#5078c3, 10%) 130%);
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

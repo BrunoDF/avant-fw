@@ -1,0 +1,166 @@
+////////////////////////////////////////////
+// Colors
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Dropdown
+////////////////////////////////////////////
+$dropdown_bg_color: rgba(255,255,255,0.95);
+
+
+////////////////////////////////////////////
+// Main Color
+////////////////////////////////////////////
+$main_color: #6495ed;
+
+
+////////////////////////////////////////////
+// Page Header
+////////////////////////////////////////////
+$page_header_color: #fff;
+$sub_header_color: #666;
+$page_header_bg_color: $main_color;
+
+
+////////////////////////////////////////////
+// Fonts
+////////////////////////////////////////////
+$title_color: #666;
+$title_sub_color: lighten($title_color, 20%);
+$title_border_color: lighten(#6495ed, 10%);
+
+
+////////////////////////////////////////////
+// Nav
+////////////////////////////////////////////
+$nav_main_color: #e5e5e5;
+$nav_hover_color: #d3d3d3;
+
+
+////////////////////////////////////////////
+// Links
+////////////////////////////////////////////
+$link_main_color: #666;
+$link_hover_color: $main_color;
+$link_active_color: darken($main_color, 10%);
+$link_hover_bg_color: #ccc;
+
+
+////////////////////////////////////////////
+// Link Button
+////////////////////////////////////////////
+$link_btn_color: #999;
+$link_btn_bg_color: #fff;
+$link_btn_border_color: $link_btn_color;
+$link_btn_hover_color: #fff;
+$link_btn_hover_bg_color: $link_btn_color;
+
+////////////////////////////////////////////
+// Button
+////////////////////////////////////////////
+$btn_color: #999;
+$btn_border_color: $link_btn_color;
+$btn_hover_color: $main_color;
+$btn_hover_bg_color: $link_btn_color;
+
+$btn_main_color: #dfdfdf;
+$btn_main_border_color: darken($main_color, 10%);
+$btn_main_hover_color: #fff;
+$btn_main_hover_bg_color: $link_btn_color;
+
+
+////////////////////////////////////////////
+// Borders
+////////////////////////////////////////////
+$border_main_color: #ccc;
+
+
+////////////////////////////////////////////
+// Inputs
+////////////////////////////////////////////
+$input_color: #666;
+$input_border_color: #999;
+$input_focus_border_color: $main_color;
+$input_focus_bg_color: lighten($main_color, 32%);
+$input_error_border_color: #f99;
+$input_error_focus_border_color: #f66;
+$input_error_bg_color: lighten($input_error_border_color, 18%);
+$input_disabled_color: #ccc;
+$input_disabled_border_color: #dcdcdc;
+$input_disabled_bg_color: #f6f6f6;
+
+
+////////////////////////////////////////////
+// Tables
+////////////////////////////////////////////
+$list_line_border_color: #fff;
+
+$list_line_bg_color: #eee;
+$list_line_hover_bg_color: darken($list_line_bg_color, 10%);
+$list_line_link_color: #666;
+$list_line_link_hover_color: #333;
+$list_line_badge_bg_color: rgba(0,0,0,0.1);
+$list_line_badge_color: #fff;
+
+$list_line_ug_bg_color: #333;
+$list_line_ug_hover_bg_color: darken($list_line_ug_bg_color, 10%);
+$list_line_ug_link_color: #fff;
+$list_line_ug_link_hover_color: #fff;
+$list_line_ug_badge_bg_color: rgba(255,255,255,0.9);
+$list_line_ug_badge_color: #000;
+
+$list_line_hp_bg_color: #fbb;
+$list_line_hp_hover_bg_color: darken($list_line_hp_bg_color, 10%);
+$list_line_hp_link_color: #900;
+$list_line_hp_link_hover_color: darken($list_line_hp_link_color, 10%);
+$list_line_hp_badge_bg_color: rgba(180,0,0,0.6);
+$list_line_hp_badge_color: #fff;
+
+$list_line_mp_bg_color: #ffb;
+$list_line_mp_hover_bg_color: darken($list_line_mp_bg_color, 10%);
+$list_line_mp_link_color: #c90;
+$list_line_mp_link_hover_color: darken($list_line_mp_link_color, 10%);
+$list_line_mp_badge_bg_color: rgba(230,160,0,0.6);
+$list_line_mp_badge_color: #fff;
+
+////////////////////////////////////////////
+// Tables
+////////////////////////////////////////////
+$table_border_color: $border_main_color;
+$table_line_bg: #fff;
+$table_line_bg_alt: lighten($main_color, 32%);
+$table_cell_main_border_color: darken($main_color, 10%);
+$table_cell_main_color: #fff;
+$table_top_divider_color: $main_color;
+$table_bottom_divider_color: $table_top_divider_color;
+
+
+////////////////////////////////////////////
+// Side Nav
+////////////////////////////////////////////
+$side_nav_bg_color: lighten($main_color, 30%);
+$side_nav_link_main_color: #716b7a;
+$side_nav_link_hover_color: #fff;
+$side_nav_link_active_color: $side_nav_link_hover_color;
+$side_nav_link_bg_hover_color: lighten($main_color, 10%);
+$side_nav_link_bg_active_color: $main_color;
+
+
+////////////////////////////////////////////
+// Messages
+////////////////////////////////////////////
+$msg_success_header_bg: #afa;
+$msg_success_header_color: #090;
+$msg_success_line: $msg_success_header_bg;
+$msg_success_line_alt: #cfc;
+
+$msg_error_header_bg: #faa;
+$msg_error_header_color: #a00;
+$msg_error_line: $msg_error_header_bg;
+$msg_error_line_alt: #fbb;
+
+$msg_warning_header_bg: #ff9;
+$msg_warning_header_color: #c90;
+$msg_warning_line: $msg_warning_header_bg;
+$msg_warning_line_alt: #ffc;

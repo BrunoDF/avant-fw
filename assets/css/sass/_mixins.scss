@@ -1,0 +1,65 @@
+////////////////////////////////////////////
+// Mixins
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Clear Fix
+////////////////////////////////////////////
+@mixin clear_fix {
+    &::after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}
+
+
+////////////////////////////////////////////
+// Border Radius
+////////////////////////////////////////////
+@mixin border_radius($val: 4px) {
+    border-radius: $val;
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    -o-border-radius: $val;
+}
+
+
+////////////////////////////////////////////
+// Linear Gradient
+////////////////////////////////////////////
+@mixin linear_gradient($dir, $dir_prefix, $color1, $color2) {
+    background-image: linear-gradient($dir, $color1, $color2);
+    background-image: -webkit-linear-gradient($dir_prefix, $color1, $color2);
+    background-image: -moz-linear-gradient($dir_prefix, $color1, $color2);
+    background-image: -ms-linear-gradient($dir_prefix, $color1, $color2);
+    background-image: -o-linear-gradient($dir_prefix, $color1, $color2);
+}
+
+
+////////////////////////////////////////////
+// Box Shadow
+////////////////////////////////////////////
+@mixin box_shadow($val) {
+    box-shadow: $val;
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    -ms-box-shadow: $val;
+    -o-box-shadow: $val;
+}
+
+
+////////////////////////////////////////////
+// Text Shadow
+////////////////////////////////////////////
+@mixin text_shadow($val) {
+    text-shadow: $val;
+    -webkit-text-shadow: $val;
+    -moz-text-shadow: $val;
+    -ms-text-shadow: $val;
+    -o-text-shadow: $val;
+}

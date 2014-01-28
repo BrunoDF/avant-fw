@@ -1,0 +1,145 @@
+////////////////////////////////////////////
+// Messages
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.msg {
+    margin: 0 auto $padding_small;
+    
+    &:last-child {
+        margin: 0;   
+    }
+    
+    p {
+        font-size: 1.8em;
+        font-weight: 700;
+        margin: 0;
+        padding: $padding_x_small $padding_medium;
+        position: relative;
+      
+        @include border_radius(4px 4px 0 0);
+        
+        .close_msg {
+            cursor: pointer;
+            height: 20px;
+            margin: -10px $padding_medium 0 0;
+            opacity: 0.6;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            
+            &:hover {
+                opacity: 1;   
+            }
+        
+            &::after {
+                content: '\e808';
+                font-family: "fontello";
+                font-style: normal;
+                font-weight: normal;
+                speak: none;
+                display: inline-block;
+                text-decoration: inherit;
+                margin: 0;
+                text-align: center;
+                font-variant: normal;
+                text-transform: none;
+                font-size: 100%;
+                height: 20px;
+            }
+        }
+    }
+    
+    ul {
+        font-size: 1.4em;
+        padding: 0;
+        
+        li {
+            padding: $padding_x_small $padding_medium;
+            
+            &:last-child {
+                @include border_radius(0 0 4px 4px);
+            }
+        }
+    }
+    
+    &.msg_success {
+        p {
+            background: $msg_success_header_bg;
+            color: $msg_success_header_color;   
+        }
+        
+        ul {
+            li {
+                background: $msg_success_line;
+                
+                &:nth-child(odd) {
+                    background: $msg_success_line_alt;
+                }
+            }
+        }
+    }
+    
+    &.msg_error {
+        p {
+            background: $msg_error_header_bg;
+            color: $msg_error_header_color;   
+        }
+        
+        ul {
+            li {
+                background: $msg_error_line;
+                
+                &:nth-child(odd) {
+                    background: $msg_error_line_alt;
+                }
+            }
+        }
+    }
+    
+    &.msg_warning {
+        p {
+            background: $msg_warning_header_bg;
+            color: $msg_warning_header_color;   
+        }
+        
+        ul {
+            li {
+                background: $msg_warning_line;
+                
+                &:nth-child(odd) {
+                    background: $msg_warning_line_alt;
+                }
+            }
+        }
+    }
+    
+    & + .msg {
+           
+    }
+}
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

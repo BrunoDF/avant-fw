@@ -1,0 +1,66 @@
+////////////////////////////////////////////
+// Default Elements
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+*:disabled {
+    background: $input_disabled_bg_color !important;
+    border-color: $input_disabled_border_color !important;
+    color: $input_disabled_color !important;
+    
+    @include box_shadow(none !important);
+}
+
+a {
+    color: $link_main_color;
+    font-size: 1.4em;
+    text-decoration: none;
+    
+    &:hover {
+        color: $link_hover_color;
+    }
+    
+     &:active {
+        color: $link_active_color;
+    }
+}
+
+button {
+    font-size: 1.4em;
+}
+
+label {
+    display: block;
+    font-size: 1.4em;
+    margin: 0 0 $margin_x_small 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+}

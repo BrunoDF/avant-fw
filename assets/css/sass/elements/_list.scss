@@ -1,0 +1,148 @@
+////////////////////////////////////////////
+// Lists
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.list {
+    width: 100%;
+    
+    li {
+        background: $list_line_bg_color;
+        border-top: 1px solid $list_line_border_color;
+        color: $list_line_link_color;
+        font-size: 1.6em;
+        font-weight: 700;
+        padding: 0;
+        position: relative;
+        
+        &:first-child {
+            border-top: 0;
+            @include border_radius(4px 4px 0 0);
+        }
+        
+        &:last-child {
+            @include border_radius(0 0 4px 4px);
+        }
+        
+        &:hover {
+            background: $list_line_hover_bg_color;   
+        }
+        
+        &::after {
+            background: $list_line_badge_bg_color;
+            color: $list_line_badge_color;
+            content: 'QHT';
+            font-size: 0.8em;
+            line-height: 24px;
+            margin: -12px 0 0 0;
+            padding: 0 $padding_x_small;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            
+            @include border_radius(3px 0 0 3px);
+        }
+        
+         &.urgent_priority {
+            background: $list_line_ug_bg_color;
+            color: $list_line_ug_link_color;
+            
+            &::after {
+                background: $list_line_ug_badge_bg_color;
+                color: $list_line_ug_badge_color;
+                content: 'URGENTE';
+            }
+            
+            &:hover {
+                background: $list_line_ug_hover_bg_color;
+            }
+            
+            a {
+                &:hover {
+                    color: $list_line_ug_link_color;
+                }
+            }
+        }
+        
+        &.high_priority {
+            background: $list_line_hp_bg_color;
+            color: $list_line_hp_link_color;
+            
+            &::after {
+                background: $list_line_hp_badge_bg_color;
+                color: $list_line_hp_badge_color;
+                content: 'ALTA';
+            }
+            
+            &:hover {
+                background: $list_line_hp_hover_bg_color;   
+            }
+            
+            a {
+                &:hover {
+                    color: $list_line_hp_link_color;
+                }
+            }
+        }
+        
+        &.medium_priority {
+            background: $list_line_mp_bg_color;
+            color: $list_line_mp_link_color;
+            
+            &::after {
+                background: $list_line_mp_badge_bg_color;
+                color: $list_line_mp_badge_color;
+                content: 'MEDIA';
+            }
+            
+            &:hover {
+                background: $list_line_mp_hover_bg_color;   
+            }
+            
+            a {
+                &:hover {
+                    color: $list_line_mp_link_color;
+                }
+            }
+        }
+        
+        a {
+            color: inherit;
+            display: block;
+            font-size: inherit;
+            font-weight: inherit;
+            padding: $padding_medium $padding_big;
+            
+            &:hover {
+                color: $list_line_link_hover_color;   
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

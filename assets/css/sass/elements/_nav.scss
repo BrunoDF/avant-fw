@@ -1,0 +1,123 @@
+////////////////////////////////////////////
+// Navigator - Menu
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.nav {
+    background: $nav_main_color;
+    height: $menu_height;
+    margin: 0 auto;
+    padding: 0 $padding_small;
+    width: 100%;
+    
+    @include border-radius;
+    
+    &.nav_fixed {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 999999;
+        
+        @include border-radius(0 0 4px 4px);
+    }
+    
+     &.nav_full {
+        max-width: none;
+        
+        @include border-radius(0);
+    }
+    
+    & > .container {
+        margin: 0 auto;
+        
+        @include clear_fix;
+    }
+    
+    .dropdown {
+        float: left;
+        width: auto;
+        
+        &:hover {
+            .dropdown_btn {
+                background: $nav_hover_color;
+            }
+        }
+        
+        .dropdown_btn {
+            line-height: $menu_height;
+            padding: 0 $padding_medium;
+        }
+    }
+}
+
+.nav_logo {
+    float: left;
+    
+    a {
+        display: inline-block;
+        font-size: 2.4em;
+        font-weight: 700;
+        line-height: $menu_height;
+        padding: 0 $padding_medium;
+    }
+    
+}
+
+.nav_menu, .nav_user {
+    a {
+        display: inline-block;
+        float: left;
+        line-height: $menu_height;
+        padding: 0 $padding_medium;
+        
+        &:hover {
+            background: $nav_hover_color;   
+        }
+    }
+}
+
+.nav_menu {
+    float: left;
+    margin: 0;
+    padding: 0;
+    
+    &.nav_menu_right {
+        float: right;
+    }
+    
+    @include clear_fix;
+}
+
+.nav_user {
+    float: right;
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+    .nav {
+        max-width: $container_big;
+    }
+}

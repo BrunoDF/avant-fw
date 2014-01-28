@@ -1,0 +1,72 @@
+////////////////////////////////////////////
+// Drop Down
+////////////////////////////////////////////
+.dropdown {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    
+    &:hover {
+        .dropdown_btn {
+            & + ul {
+                display: block;
+            }
+        }
+    }
+    
+    & > ul {
+        background: $dropdown_bg_color;
+        display: none;
+        margin: 0;
+        min-width: 90%;
+        padding: $padding_small 0;
+        position: absolute;
+        right: 0;
+        top: 90%;
+        z-index: 9999;
+        
+        @include border_radius;
+        @include box_shadow(0 1px 2px rgba(0,0,0,0.3));
+        
+        & > li {
+            display: block;
+            float: none;
+            width: 100%;
+            
+            & > a {
+                display: inline-block;
+                float: none;
+                line-height: $dropdown_line_height;
+                padding: $padding_small/2 $padding_medium;
+                text-align: left;
+                white-space: nowrap;
+                width: 100%;
+                
+                &:hover {
+                    background: rgba(0,0,0,0.1);
+                }
+            }
+        }
+    }
+}
+
+.dropdown_btn {
+    &::after {
+        content: '\e801';
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        margin-right: 0;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        margin-left: .4em;
+        font-size: 150%;
+        vertical-align: middle;
+        line-height: 0;
+    }
+}
+

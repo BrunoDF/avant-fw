@@ -1,0 +1,113 @@
+////////////////////////////////////////////
+// Grid
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding: $padding_small 0 0 0;
+    
+    & + .wrapper {
+        padding: 0;
+    }
+    
+    & > .container {
+        margin: 0 auto $padding_small;
+    }
+    
+    @include clear_fix;
+}
+
+.container {
+    margin: 0 auto $padding_small;
+    max-width: 100%;
+    
+    @include clear_fix;
+}
+
+.col {
+    @include clear_fix;
+    
+    @for $i from 1 through 12 {
+        &.size_#{$i} {
+            //background: #666;
+            padding: $padding_small $padding_medium;
+            width: 100%;
+            
+            .col {
+                @for $j from 1 through 12 {
+                    &.size_#{$j} {
+                        padding: 0 0 $padding_small 0;
+                    }
+            
+                    &:last-child.size_#{$j} {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        &:last-child {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    .container {
+        width: $container_medium;
+    }  
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    .container {
+        width: $container_big;
+    }  
+    
+    .col {
+        @for $i from 1 through 12 {
+            &.size_#{$i} { 
+                float: left;
+                width: (8.333333333% * $i);
+            
+                .col {
+                    @for $j from 1 through 12 {
+                        &.size_#{$j} {
+                            padding: 0 $padding_medium 0 0;
+                        }
+                    }
+                }
+            }
+        
+            &.offset_#{$i} {
+                margin-left: (8.333333333% * $i);
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+    .container {
+        width: $container_larger;
+    }    
+}

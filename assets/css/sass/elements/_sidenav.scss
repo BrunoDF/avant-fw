@@ -1,0 +1,90 @@
+////////////////////////////////////////////
+// Side Nav
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.sidenav {
+    .sidenav_nav { // Deve ser um UL
+        background: $side_nav_bg_color;
+        padding: 10px 0;
+        
+        @include border_radius;
+    
+        li {
+            line-height: 34px;
+            
+            a {
+                color: $side_nav_link_main_color;
+                display: inline-block;
+                padding: 0 $padding_medium;
+                width: 100%;
+                
+                &:hover {
+                    background: $side_nav_link_bg_hover_color;
+                    color: $side_nav_link_hover_color;
+                }
+                
+                &:active {
+                    background: $side_nav_link_bg_active_color;
+                    color: $side_nav_link_active_color;
+                }
+                
+                &.selected {
+                    border-right: 2px solid $main_color;
+                    color: $main_color;
+                    font-weight: 700;
+                    
+                    &:hover, &:active {
+                        background: none;   
+                    }
+                }
+            }
+        }
+    }
+    
+    .sidenav_subnav { // Deve ser um UL
+        display: none;
+        padding: 0 0 $padding_small 0;
+        
+        & > li {
+            a {
+                font-size: 1.2em;
+                padding: 0 $padding_big+10px; 
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    .sidenav {
+        .sidenav_nav {
+            .selected {
+                & + .sidenav_subnav {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

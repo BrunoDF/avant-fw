@@ -1,0 +1,86 @@
+////////////////////////////////////////////
+// Fonts
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+html {
+    font-size: 62.5%;
+}
+
+*, *::after, *::before {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    font-size: inherit;
+}
+
+.page_header {
+    background: $page_header_bg_color;
+    color: $page_header_color;
+    padding: $padding_small;
+    
+    h1 {
+        font-size: 2.4em;
+        margin: 0 auto;
+        padding: 0 $padding_medium;
+    }
+}
+
+.title {
+    border-bottom: 1px solid $title_border_color;
+    color: $title_color;
+    font-size: 2.1em;
+    margin: 0 0 $margin_small 0;
+    padding: 0 0 $padding_x_small 0;
+    width: 100%;
+    
+    small {
+        color: $title_sub_color;
+        font-size: 0.7em;
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    .page_header {
+        h1 {
+           width: $container_medium; 
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    .page_header {
+        h1 {
+           width: $container_big; 
+        }
+    }
+    
+    .title {
+        width: 60%;   
+    }
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   .page_header {
+        h1 {
+           width: $container_larger; 
+        }
+    }
+}

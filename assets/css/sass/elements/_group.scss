@@ -1,0 +1,54 @@
+.group {
+    margin: 0 auto $padding_small;
+    
+    &:last-child {
+        margin: 0;   
+    }
+    
+    @include clear_fix;
+    
+    & > ul {
+        & > li {
+            display: table-cell;
+            text-align: center;
+            width: 1%;
+            
+            & > a, & > button {
+                display: inline-block;
+                line-height: $btn_height;
+                
+                &:not(.btn) {
+                    line-height: $btn_height + 2px;
+                }
+            }
+        }
+    }
+}
+
+.group {
+    .btn {
+        @include border_radius(0);
+    }
+    
+    ul {
+        li {
+             &:first-child {
+                .btn {
+                    border-left: 1px solid $btn_border_color;
+                    
+                    @include border_radius(4px 0 0 4px);
+                    
+                    &.btn_main {
+                        border-left: 1px solid $btn_main_border_color;
+                    }
+                }
+            }
+            
+            &:last-child {
+                .btn {
+                    @include border_radius(0 4px 4px 0);
+                }
+            }
+        }
+    }
+}

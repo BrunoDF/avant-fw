@@ -1,0 +1,112 @@
+////////////////////////////////////////////
+// Tables
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.table {
+    width: 100%;
+    
+    tr {
+        td, th {
+            border: 1px solid $table_border_color;
+            border-left: 0;
+            border-top: 0;
+            text-align: center;
+            vertical-align: middle;
+            word-break: break-word;
+            
+            &:first-child {
+                border-left: 1px solid $table_border_color; 
+            }
+            
+            &.highlight {
+                border-color: $table_cell_main_border_color;
+                color: $table_cell_main_color; 
+                
+                @include linear_gradient(to bottom, top, #6495ed, #5078c3 130%);
+            }
+        }
+        
+        th {
+            border-top: 1px solid $table_border_color; 
+            border-bottom: 1px solid $table_top_divider_color;
+        }
+    }
+    
+    thead th, tfoot td {
+        padding: $padding_x_small $padding_small;   
+    }
+    
+    tbody {
+        tr {
+            td {
+                background: $table_line_bg;
+                padding: $padding_small;
+            }
+            
+            &:nth-child(even) {
+                td {
+                    background: $table_line_bg_alt;
+                }
+            }
+            
+            &:last-child {
+                td {
+                    border-bottom: 1px solid $table_bottom_divider_color;   
+                }
+            }
+        }
+    }
+    
+    & > thead, & > tfoot {
+        & > tr {
+            @include linear_gradient(to bottom, top, #fff, #dfdfdf 130%);
+            
+            th, td {
+                height: $table_header_height;   
+            }
+            
+            & > th:first-child {
+                @include border_radius(4px 0 0 0);
+            }
+            
+            & > th:last-child {
+                @include border_radius(0 4px 0 0);
+            }
+            
+            & > td:first-child {
+                @include border_radius(0 0 0 4px);
+            }
+            
+            & > td:last-child {
+                @include border_radius(0 0 4px 0);
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

@@ -1,6 +1,7 @@
 #Do no include .sass-cache to repository
 
 assets/css/sass/.sass-cache/
+.sass-cache/
 
 #Do no include node_modules to repository
 

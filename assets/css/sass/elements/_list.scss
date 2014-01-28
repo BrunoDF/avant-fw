@@ -30,9 +30,6 @@
         }
         
         &::after {
-            background: $list_line_badge_bg_color;
-            color: $list_line_badge_color;
-            content: 'QHT';
             font-size: $font_size;
             line-height: 24px;
             margin: -12px 0 0 0;
@@ -45,27 +42,6 @@
             @include border_radius(3px 0 0 3px);
         }
         
-         &.urgent_priority {
-            background: $list_line_ug_bg_color;
-            color: $list_line_ug_link_color;
-            
-            &::after {
-                background: $list_line_ug_badge_bg_color;
-                color: $list_line_ug_badge_color;
-                content: 'URGENTE';
-            }
-            
-            &:hover {
-                background: $list_line_ug_hover_bg_color;
-            }
-            
-            a {
-                &:hover {
-                    color: $list_line_ug_link_color;
-                }
-            }
-        }
-        
         &.high_priority {
             background: $list_line_hp_bg_color;
             color: $list_line_hp_link_color;
@@ -73,7 +49,7 @@
             &::after {
                 background: $list_line_hp_badge_bg_color;
                 color: $list_line_hp_badge_color;
-                content: 'ALTA';
+                content: 'URGENTE';
             }
             
             &:hover {
@@ -104,6 +80,27 @@
             a {
                 &:hover {
                     color: $list_line_mp_link_color;
+                }
+            }
+        }
+        
+         &.low_priority {
+            background: $list_line_lp_bg_color;
+            color: $list_line_lp_link_color;
+            
+            &::after {
+                background: $list_line_lp_badge_bg_color;
+                color: $list_line_lp_badge_color;
+                content: 'BAIXA';
+            }
+            
+            &:hover {
+                background: $list_line_lp_hover_bg_color;   
+            }
+            
+            a {
+                &:hover {
+                    color: $list_line_lp_link_hover_color;
                 }
             }
         }

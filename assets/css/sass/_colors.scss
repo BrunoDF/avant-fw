@@ -120,13 +120,6 @@ $list_line_link_hover_color: #333;
 $list_line_badge_bg_color: rgba(0,0,0,0.1);
 $list_line_badge_color: #fff;
 
-$list_line_ug_bg_color: #333;
-$list_line_ug_hover_bg_color: darken($list_line_ug_bg_color, 10%);
-$list_line_ug_link_color: #fff;
-$list_line_ug_link_hover_color: #fff;
-$list_line_ug_badge_bg_color: rgba(255,255,255,0.9);
-$list_line_ug_badge_color: #000;
-
 $list_line_hp_bg_color: #fbb;
 $list_line_hp_hover_bg_color: darken($list_line_hp_bg_color, 10%);
 $list_line_hp_link_color: #900;
@@ -140,6 +133,14 @@ $list_line_mp_link_color: #c90;
 $list_line_mp_link_hover_color: darken($list_line_mp_link_color, 10%);
 $list_line_mp_badge_bg_color: rgba(230,160,0,0.6);
 $list_line_mp_badge_color: #fff;
+
+$list_line_lp_bg_color: #ccf;
+$list_line_lp_hover_bg_color: darken($list_line_lp_bg_color, 10%);
+$list_line_lp_link_color: #669;
+$list_line_lp_link_hover_color: darken($list_line_lp_link_color, 10%);
+$list_line_lp_badge_bg_color: rgba(0,0,180,0.4);
+$list_line_lp_badge_color: #fff;
+
 
 ////////////////////////////////////////////
 // Table

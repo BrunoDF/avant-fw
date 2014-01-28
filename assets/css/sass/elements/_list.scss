@@ -30,6 +30,7 @@
         }
         
         &::after {
+            content: attr(data-priority-label);
             font-size: $font_size;
             line-height: 24px;
             margin: -12px 0 0 0;
@@ -49,7 +50,6 @@
             &::after {
                 background: $list_line_hp_badge_bg_color;
                 color: $list_line_hp_badge_color;
-                content: 'URGENTE';
             }
             
             &:hover {
@@ -70,7 +70,6 @@
             &::after {
                 background: $list_line_mp_badge_bg_color;
                 color: $list_line_mp_badge_color;
-                content: 'MEDIA';
             }
             
             &:hover {
@@ -91,7 +90,6 @@
             &::after {
                 background: $list_line_lp_badge_bg_color;
                 color: $list_line_lp_badge_color;
-                content: 'BAIXA';
             }
             
             &:hover {

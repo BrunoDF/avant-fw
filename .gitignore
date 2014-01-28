@@ -1,0 +1,7 @@
+#Do no include .sass-cache to repository
+
+assets/css/sass/.sass-cache/
+
+#Do no include temp files to repository
+
+*~

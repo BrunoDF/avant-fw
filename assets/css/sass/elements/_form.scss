@@ -40,6 +40,16 @@ input[type="text"], input[type="password"], select {
 
 select {
     padding: 0 $padding_small;
+    
+    @include linear-gradient(to bottom, top, $select_gradient_color_1, $select_gradient_color_2);
+    
+    &:focus {
+        border-color: $select_focus_border_color;
+    }
+    
+    &:hover {
+        @include linear-gradient(to bottom, top, $select_gradient_color_1, $select_hover_gradient_color_2);   
+    }
 }
 
 textarea {

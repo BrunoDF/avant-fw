@@ -100,6 +100,15 @@ $input_disabled_bg_color: #f6f6f6;
 
 
 ////////////////////////////////////////////
+// Select
+////////////////////////////////////////////
+$select_gradient_color_1: #f6f6f6;
+$select_gradient_color_2: #dcdcdc;
+$select_hover_gradient_color_2: #ccc;
+$select_focus_border_color: $input_focus_border_color;
+
+
+////////////////////////////////////////////
 // List
 ////////////////////////////////////////////
 $list_line_border_color: #fff;

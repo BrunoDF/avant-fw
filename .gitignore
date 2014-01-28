@@ -2,6 +2,10 @@
 
 assets/css/sass/.sass-cache/
 
+#Do no include node_modules to repository
+
+node_modules/
+
 #Do no include temp files to repository
 
 *~

@@ -83,5 +83,5 @@
 // Glow
 ////////////////////////////////////////////
 .glow {
-    @include animation(glow, 0.5s, linear, 0, infinite, alternate);
+    @include animation(glow, 0.5s, linear, 0s, infinite, alternate);
 }

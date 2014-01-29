@@ -1,0 +1,87 @@
+////////////////////////////////////////////
+// Animation
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Keyframe
+////////////////////////////////////////////
+@keyframes bounce {
+    0% {
+        @include transform(translate3d(0,0,0));
+    }
+    
+    10% {
+        @include transform(translate3d(-1.5%,0,0));
+    }
+    
+    20% {
+        @include transform(translate3d(0.3%,0,0));
+    }
+    
+    28% {
+        @include transform(translate3d(-0.8%,0,0));
+    }
+    
+    34% {
+        @include transform(translate3d(0,0,0));
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        @include transform(translate3d(0,0,0));
+    }
+    
+    10% {
+        @include transform(translate3d(-1.5%,0,0));
+    }
+    
+    20% {
+        @include transform(translate3d(0.3%,0,0));
+    }
+    
+    28% {
+        @include transform(translate3d(-0.8%,0,0));
+    }
+    
+    34% {
+        @include transform(translate3d(0,0,0));
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.6;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes glow {
+    0% {
+        opacity: 0.6;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+
+////////////////////////////////////////////
+// Bounce
+////////////////////////////////////////////
+.bounce {
+    @include animation(bounce, 3s, ease-in-out, 1s, infinite, normal);
+}
+
+
+////////////////////////////////////////////
+// Glow
+////////////////////////////////////////////
+.glow {
+    @include animation(glow, 0.5s, linear, 0, infinite, alternate);
+}

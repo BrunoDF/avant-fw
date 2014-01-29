@@ -2,6 +2,15 @@
 // Mixins
 ////////////////////////////////////////////
 
+////////////////////////////////////////////
+// Animation
+////////////////////////////////////////////
+@mixin animation($name, $duration, $timing_func, $delay, $it_count, $direction) {
+    animation: $name $duration $timing_func $delay $it_count $direction;
+    -webkit-animation: $name $duration $timing_func $delay $it_count $direction;
+    -moz-animation: $name $duration $timing_func $delay $it_count $direction;
+}
+
 
 ////////////////////////////////////////////
 // Border Radius
@@ -73,4 +82,13 @@
     -moz-text-shadow: $val;
     -ms-text-shadow: $val;
     -o-text-shadow: $val;
+}
+
+////////////////////////////////////////////
+// Transform
+////////////////////////////////////////////
+@mixin transform($val) {
+    transform: $val;
+    -webkit-transform: $val;
+    -moz-transform: $val;
 }

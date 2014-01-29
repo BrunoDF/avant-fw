@@ -1,0 +1,83 @@
+////////////////////////////////////////////
+// Tabs
+////////////////////////////////////////////
+.tab_group {
+    border-bottom: 1px solid $tab_border_color;
+    text-align: center;
+    width: 100%;
+    
+    & > ul {
+        display: table;
+        margin: 0 auto;
+        
+        & > li {
+            border: 1px solid $tab_border_color;
+            border-bottom: 0;
+            border-left: 0;
+            color: $tab_color;
+            display: table-cell;
+            font-size: $font_size;
+            height: $btn_height;
+            line-height: $btn_height;
+            position: relative;
+            
+            &:first-child {
+                border-left: 1px solid $tab_border_color;
+                
+                @include border_radius(4px 0 0 0);   
+            }
+            
+            &:last-child {
+                @include border_radius(0 4px 0 0);   
+            }
+            
+            &:hover {
+                background: $tab_hover_bg_color;
+                color: $tab_hover_color;
+            }
+            
+            &:active {
+                background: $tab_active_bg_color;
+            }
+            
+            &.selected {
+                background: $tab_selected_bg_color;   
+                color: $tab_selected_color;
+            }
+            
+            & > a {
+                color: inherit;
+                display: block;
+                font-size: inherit;
+                height: inherit;
+                line-height: inherit;
+                padding: 0 $padding_big;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+}

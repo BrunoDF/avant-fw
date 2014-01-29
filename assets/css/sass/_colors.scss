@@ -143,6 +143,18 @@ $list_line_lp_badge_color: #fff;
 
 
 ////////////////////////////////////////////
+// Tab
+////////////////////////////////////////////
+$tab_color: $main_color;
+$tab_border_color: $main_color;
+$tab_hover_color: #fff;
+$tab_hover_bg_color: lighten($main_color, 10%);
+$tab_active_bg_color: $main_color;
+$tab_selected_color: #fff;
+$tab_selected_bg_color: $main_color;
+
+
+////////////////////////////////////////////
 // Table
 ////////////////////////////////////////////
 $table_border_color: $border_main_color;

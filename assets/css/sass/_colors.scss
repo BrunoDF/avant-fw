@@ -7,6 +7,7 @@
 // Dropdown
 ////////////////////////////////////////////
 $dropdown_bg_color: rgba(255,255,255,0.95);
+$dropdown_btn_color: #666;
 
 
 ////////////////////////////////////////////
@@ -34,6 +35,9 @@ $title_border_color: lighten(#6495ed, 10%);
 ////////////////////////////////////////////
 // Nav
 ////////////////////////////////////////////
+$menu_btn_color: #666;
+$menu_btn_active_color: $main_color;
+
 $nav_main_color: #e5e5e5;
 $nav_hover_color: #d3d3d3;
 

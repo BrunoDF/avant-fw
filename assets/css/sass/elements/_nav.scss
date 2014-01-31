@@ -7,6 +7,31 @@
 // Small - Default
 ////////////////////////////////////////////
 .nav {
+    .menu_btn {
+        background: none;
+        border: 0;
+        color: $menu_btn_color;
+        float: left;
+        font-size: 2em;
+        height: $menu_height;
+        margin: 0;
+        outline: none;
+        padding: 0 $padding_medium;
+        text-align: center;
+        
+        &::after, &::before {
+            margin: 0;   
+        }
+        
+        &:hover {
+            background: $nav_hover_color;   
+        }
+        
+        &:active {
+            color: $menu_btn_active_color;   
+        }
+    }
+    
     background: $nav_main_color;
     height: $menu_height;
     margin: 0 auto;
@@ -38,9 +63,6 @@
     }
     
     .dropdown {
-        float: left;
-        width: auto;
-        
         &:hover {
             .dropdown_btn {
                 background: $nav_hover_color;
@@ -70,7 +92,6 @@
 .nav_menu, .nav_user {
     a {
         display: inline-block;
-        float: left;
         line-height: $menu_height;
         padding: 0 $padding_medium;
         
@@ -81,19 +102,63 @@
 }
 
 .nav_menu {
+    background: #f3f3f3;
+    border-right: 1px solid #acacac;
+    height: 100%;
+    left: -80%;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    
     float: left;
     margin: 0;
-    padding: 0;
+    padding: $menu_height 0 0 0;
+    z-index: 999999999;
     
-    &.nav_menu_right {
-        float: right;
+    & > ul {
+        @include clear_fix;
+        
+        & > li {
+            & > a, & > div > a {
+                background: #e6e6e6;
+                width: 100%;
+            }
+        }
     }
     
-    @include clear_fix;
+    @include transition(transform, -webkit-transform, 0.3s ease-in-out);
+    
+    .menu_btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .dropdown {
+         ul {
+            background: none;
+            position: relative;
+            
+            @include border_radius(0);
+            @include box_shadow(none);
+            
+            a {
+                padding-left: $padding_medium*2;
+            }
+        }   
+    }
 }
 
 .nav_user {
     float: right;
+    
+    .dropdown {
+        .dropdown_btn {
+            height: 0;
+            line-height: 0;
+            padding: $menu_height/2 $padding_medium;
+        }
+    }
 }
 
 
@@ -101,7 +166,7 @@
 // Tablet
 ////////////////////////////////////////////
 @media (min-width: $medium_scr) {
-    
+
 }
 
 
@@ -109,7 +174,55 @@
 // Desktop
 ////////////////////////////////////////////
 @media (min-width: $big_scr) {
+    .nav {
+        .menu_btn {
+            display: none;   
+        }
+    }
     
+    .nav_menu {
+        background: none;
+        border-right: none;
+        height: auto;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: auto;
+        
+        float: left;
+        margin: 0;
+        padding: 0;
+        
+        &.nav_menu_right {
+            float: right;
+        }
+        
+        & > ul {
+            background: none;
+            
+            & > li {
+                float: left;
+                
+                & > a, & > div > a {
+                    background: none;
+                }
+            }
+        }
+        
+        .dropdown {
+            ul {
+                background: $dropdown_bg_color;
+                position: absolute;
+                
+                @include border_radius;
+                @include box_shadow(0 1px 2px rgba(0,0,0,0.3));
+                
+                a {
+                    padding-left: $padding_medium;
+                }
+            }
+        } 
+    }
 }
 
 
@@ -117,7 +230,4 @@
 // Large Desktop
 ////////////////////////////////////////////
 @media (min-width: $larger_scr) {
-    .nav {
-        max-width: $container_big;
-    }
 }

@@ -51,6 +51,8 @@
 }
 
 .dropdown_btn {
+    color: $dropdown_btn_color;
+    
     &::after {
         content: '\e801';
         font-family: "fontello";

@@ -1,0 +1,127 @@
+////////////////////////////////////////////
+// Badge
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.badge {
+    &::after {
+        background: $badge_bg_color;
+        bottom: auto;
+        color: $badge_color;
+        content: attr(data-badge);
+        display: table-cell;
+        font-size: 11px;
+        font-weight: 700;
+        height: 20px;
+        left: -10px;
+        line-height: 20px;
+        pointer-events: none;
+        position: absolute;
+        right: auto;
+        text-align: center;
+        top: -8px;
+        width: 20px;
+        
+        @include border_radius(50%);
+    }
+
+    &:hover::after {
+        background: $badge_hover_bg_color;
+    }
+    
+    &.badge_top_right {
+        &::after {
+            bottom: auto;
+            left: auto;
+            right: -10px;
+            top: -8px;
+            
+        }
+    }
+    
+    &.badge_bottom_left {
+        &::after {
+            bottom: -8px;
+            left: -10px;
+            right: auto;
+            top: auto;
+            
+        }
+    }
+    
+     &.badge_bottom_right {
+        &::after {
+            bottom: -8px;
+            left: auto;
+            right: -10px;
+            top: auto;
+            
+        }
+    }
+    
+    &.badge_left_center {
+        &::after {
+            bottom: auto;
+            left: -10px;
+            margin-top: -10px;
+            right: auto;
+            top: 50%;
+        }
+    }
+    
+    &.badge_right_center {
+        &::after {
+            bottom: auto;
+            left: auto;
+            margin-top: -10px;
+            right: -10px;
+            top: 50%;
+        }
+    }
+    
+     &.badge_top_center {
+        &::after {
+            bottom: auto;
+            left: 50%;
+            margin-left: -10px;
+            right: auto;
+            top: -10px;
+        }
+    }
+    
+    &.badge_bottom_center {
+        &::after {
+            bottom: -10px;
+            left: 50%;
+            margin-left: -10px;
+            right: auto;
+            top: auto;
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

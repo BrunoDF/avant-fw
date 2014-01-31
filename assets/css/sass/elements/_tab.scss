@@ -15,7 +15,8 @@
             border-bottom: 0;
             border-left: 0;
             color: $tab_color;
-            display: table-cell;
+            display: inline-block;
+            float: left;
             font-size: $font_size;
             height: $btn_height;
             line-height: $btn_height;

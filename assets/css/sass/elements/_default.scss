@@ -27,6 +27,12 @@ a {
     }
 }
 
+form {
+    margin: 0;
+    
+    @include clear_fix();
+}
+
 label {
     display: block;
     margin: 0 0 $margin_x_small 0;

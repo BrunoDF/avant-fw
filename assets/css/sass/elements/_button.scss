@@ -18,7 +18,6 @@
     
     &.btn_link {
         border: 1px solid $link_btn_border_color;
-        border-left: 0;
         color: $link_btn_color;
         
         &:hover {
@@ -29,7 +28,6 @@
     
     &.btn_std {
         border: 1px solid $btn_border_color;
-        border-left: 0;
         color: $btn_color;
         
         @include linear_gradient(to bottom, top, #fff, #dfdfdf 130%);
@@ -42,7 +40,6 @@
     
     &.btn_main {
         border: 1px solid $btn_main_border_color;
-        border-left: 0;
         color: $btn_main_color;
         
         @include linear_gradient(to bottom, top, #6495ed, #5078c3 130%);

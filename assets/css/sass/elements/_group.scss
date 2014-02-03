@@ -28,6 +28,7 @@
 .group {
     .btn {
         @include border_radius(0);
+        border-left: 0;
     }
     
     ul {

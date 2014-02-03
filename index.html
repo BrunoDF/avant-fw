@@ -37,8 +37,8 @@
                     <div class="nav_user">
                         <ul>
                             <li>
-                                <div class="dropdown" data-badge="55">
-                                    <p class="dropdown_btn icon-user"></p>
+                                <div class="dropdown">
+                                    <p class="dropdown_btn icon-user">Fulano</p>
                                     <ul>
                                         <li><a href="">Gerar novo ticket de suporte</a></li>
                                         <li><a href="">Link 2</a></li>
@@ -262,34 +262,43 @@
                     </div>
                     
                     <div class="container">
-                        <p class="title">
-                            Form elements
-                        </p>
-                        <div class="col size_6">
-                            <label>Input Text</label>
-                            <input type="text">
+                        <p class="title">Form elements</p>
+                        <form>
+                            <div class="col size_6">
+                                <label>Input Text</label>
+                                <input type="text">
+                                
+                                <label>Input Password</label>
+                                <input type="password">
+                                
+                                <label>Select Field</label>
+                                <select>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
                             
-                            <label>Input Password</label>
-                            <input type="password">
-                            
-                            <label>Select Field</label>
-                            <select>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
-                            </select>
-                        </div>
-                        
-                        <div class="col size_6">
-                            <label>Input Error</label>
-                            <input type="text" class="error">
-                            
-                            <label>Input Disabled</label>
-                            <input type="text" disabled>
-                            
-                            <label>Textarea</label>
-                            <textarea></textarea>
-                        </div>
+                            <div class="col size_6">
+                                <label>Input Error</label>
+                                <input type="text" class="error">
+                                
+                                <label>Input Disabled</label>
+                                <input type="text" disabled>
+                                
+                                <label>Textarea</label>
+                                <textarea></textarea>
+                                
+                                <div class="col size_6 offset_6">
+                                    <div class="group">
+                                        <ul>
+                                            <li><button class="btn btn_std">Cancelar</button></li>
+                                            <li><input class="btn btn_main" type="submit" value="Enviar"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     
                       <div class="container">

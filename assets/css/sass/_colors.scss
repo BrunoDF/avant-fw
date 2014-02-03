@@ -25,6 +25,18 @@ $main_color: #6495ed;
 
 
 ////////////////////////////////////////////
+// Main Color
+////////////////////////////////////////////
+$modal_bg_color: rgba(0,0,0,0.6);
+$modal_container_bg_color: #fff;
+$modal_container_header_bg_color: $main_color;
+$modal_container_header_color: #fff;
+$modal_footer_border_color: #ccc;
+$modal_btn_color: #fff;
+$modal_btn_hover_bg_color: darken($main_color, 20%);
+
+
+////////////////////////////////////////////
 // Page Header
 ////////////////////////////////////////////
 $page_header_color: #fff;

@@ -5,7 +5,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div class="modal">
+        <div id="meuModal" class="modal">
             <div class="modal_container">
                 <p>T&iacute;tulo do modal</p>
                 <button class="modal_btn icon-cancel-circled"></button>
@@ -206,7 +206,7 @@ Suspendisse ac faucibus quam, sit amet sodales massa. Nulla hendrerit nibh ac en
                             <div class="group">
                                 <ul>
                                     <li><button class="btn btn_std" disabled>Button 1</button></li>
-                                    <li><button class="btn btn_main">Button 2</button></li>
+                                    <li><button class="btn btn_main" data_modal_target="myModal">Button 2</button></li>
                                      <li>
                                         <div class="dropdown">
                                           <button class="btn btn_std dropdown_btn">Button 3</button>

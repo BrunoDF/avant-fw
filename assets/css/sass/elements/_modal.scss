@@ -8,6 +8,7 @@
 ////////////////////////////////////////////
 .modal {
     background: $modal_bg_color;
+    display: none;
     height: 100%;
     left: 0;
     overflow-y: auto;
@@ -47,7 +48,7 @@
             border: 0;
             color: $modal_btn_color;
             float: left;
-            font-size: 2em;
+            font-size: $font_size + 0.6em;
             height: $menu_height;
             margin: 0;
             outline: none;

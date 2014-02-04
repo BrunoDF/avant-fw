@@ -115,6 +115,10 @@
     padding: $menu_height 0 0 0;
     z-index: 999999999;
     
+    &.visible {
+        @include transform(translate3d(100%,0,0));
+    }
+    
     & > ul {
         @include clear_fix;
         
@@ -166,7 +170,10 @@
 // Tablet
 ////////////////////////////////////////////
 @media (min-width: $medium_scr) {
-
+    .nav_menu {
+        left: -40%;
+        width: 40%;
+    }
 }
 
 

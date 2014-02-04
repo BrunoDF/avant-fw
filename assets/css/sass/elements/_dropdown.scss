@@ -6,11 +6,20 @@
     position: relative;
     width: 100%;
     
-    &:hover {
-        .dropdown_btn {
-            & + ul {
-                display: block;
-            }
+    &.visible {
+        &::after {
+            background: rgba(0,0,0,0.15);
+            content: '';
+            height: 100%;
+            left: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        
+        ul {
+            display: block;
         }
     }
     
@@ -51,7 +60,10 @@
 }
 
 .dropdown_btn {
+    background: none;
+    border: 0;
     color: $dropdown_btn_color;
+    outline: none;
     
     &::after {
         content: '\e801';

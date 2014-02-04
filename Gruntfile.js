@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 options: {
-                    mangle: true  
+                    mangle: true
                 },
                 files: {
                     'assets/js/main.js': ['assets/js/src/*.js']

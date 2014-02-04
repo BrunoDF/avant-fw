@@ -63,15 +63,13 @@
     }
     
     .dropdown {
-        &:hover {
-            .dropdown_btn {
-                background: $nav_hover_color;
-            }
-        }
-        
         .dropdown_btn {
             line-height: $menu_height;
             padding: 0 $padding_medium;
+            
+            &:hover {
+                background: $nav_hover_color;
+            }
         }
     }
 }
@@ -123,8 +121,9 @@
         @include clear_fix;
         
         & > li {
-            & > a, & > div > a {
+            & > a, & > div > button {
                 background: #e6e6e6;
+                text-align: left;
                 width: 100%;
             }
         }
@@ -210,7 +209,7 @@
             & > li {
                 float: left;
                 
-                & > a, & > div > a {
+                & > a, & > div > button {
                     background: none;
                 }
             }

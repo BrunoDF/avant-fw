@@ -41,5 +41,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     
     // Default Task
-    grunt.registerTask('default', ['sass', 'uglify','watch']);
+    grunt.registerTask('default', ['sass', 'uglify', 'watch']);
 };

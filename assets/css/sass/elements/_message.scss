@@ -8,6 +8,8 @@
 .msg {
     margin: 0 auto $padding_small;
     
+    @include transition(opacity, opacity, 0.5s ease-in-out);
+    
     &:last-child {
         margin: 0;   
     }

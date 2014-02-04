@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['assets/js/src/*.js'],
-                tasks: ['']
+                tasks: ['uglify']
             }
         }
     });

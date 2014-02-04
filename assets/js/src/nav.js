@@ -5,7 +5,7 @@ var Nav = {
         Nav.menu.classList.toggle('visible');
     },
     onWindowResize: function() {
-        if(ScreenSize.isBig() || ScreenSize.isLarge()) {
+        if (ScreenSize.isBig() || ScreenSize.isLarge()) {
             Nav.menu.classList.remove('visible');
         }
     }

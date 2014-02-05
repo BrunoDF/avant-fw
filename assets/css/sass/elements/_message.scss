@@ -7,8 +7,9 @@
 ////////////////////////////////////////////
 .msg {
     margin: 0 auto $padding_small;
+    overflow: hidden;
     
-    @include transition(opacity, opacity, 0.5s ease-in-out);
+    @include transition(height, height, 0.5s ease-in-out);
     
     &:last-child {
         margin: 0;   

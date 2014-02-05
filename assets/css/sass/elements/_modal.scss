@@ -17,6 +17,10 @@
     width: 100%;
     z-index: 999999999999;
     
+    &.visible {
+        display: block;   
+    }
+    
     .modal_container {
         background: $modal_container_bg_color;
         margin: 0 auto $margin_big*2;
@@ -30,7 +34,7 @@
         @include clear_fix;
         @include transition(transform, -webkit-transform, 0.5s ease-in-out, opacity 0.5s ease-in-out);
                 
-        &.slide {
+        &.visible {
             opacity: 1;
                     
             @include transform(translate3d(0, $modal_container_initial_position,0));            

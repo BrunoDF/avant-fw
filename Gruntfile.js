@@ -19,7 +19,8 @@ module.exports = function(grunt) {
                     mangle: true
                 },
                 files: {
-                    'assets/js/main.js': ['assets/js/src/*.js']
+                    'assets/js/main.js': ['assets/js/src/*.js'],
+                    'assets/js/avant-modal.js': ['assets/js/src/modal.js'],
                 }
             },
             gzip: {
@@ -28,7 +29,8 @@ module.exports = function(grunt) {
                     report: 'gzip'
                 },
                 files: {
-                    'assets/js/main.js': ['assets/js/src/*.js']
+                    'assets/js/main.js': ['assets/js/src/*.js'],
+                    'assets/js/avant-modal.js': ['assets/js/src/modal.js'],
                 }
             }
         },

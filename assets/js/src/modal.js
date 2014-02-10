@@ -1,12 +1,18 @@
 var Modal = {
     close: function(modal) {
-        var hideModal = function() { 
-            modal.classList.remove('visible');
-            modal.firstElementChild.removeEventListener('transitionend', hideModal, true);
+        var hideModal = function() {
+            modal.removeEventListener('transitionend', hideModal, true);
+            modal.style.display = "none";
             document.body.style.overflow = 'auto';
         };
-        modal.firstElementChild.addEventListener('transitionend', hideModal, true);
+        
         modal.firstElementChild.classList.remove('visible');
+        
+        setTimeout(function() {
+            modal.classList.remove('visible');
+            modal.addEventListener('transitionend', hideModal, true);
+        }, 100);
+        
     },
     onDocumentReady: function() {
         for (var i=0; i < Modal.trigger.length; i++) {
@@ -18,8 +24,12 @@ var Modal = {
     },
     open: function(id) {
         var modal = document.getElementById(id);
-        modal.classList.add('visible');
-        setTimeout(function() { modal.firstElementChild.classList.add('visible') }, 100);
+        modal.style.display = "block";
+        setTimeout(function() { 
+            modal.classList.add('visible');
+            modal.firstElementChild.classList.add('visible');
+        }, 100);
+        
         document.body.style.overflow = 'hidden';
         
         modal.getElementsByClassName('modal_btn')[0].onclick = function() {
@@ -36,3 +46,11 @@ var Modal = {
     },
     trigger: document.querySelectorAll('[data-modal-target]')
 }
+
+
+
+var hideModalChild = function(modal) {
+    modal.firstElementChild.removeEventListener('transitionend', callHideModal(modal), true);
+    modal.addEventListener('transitionend', callHideModalChild(modal), true);
+    modal.classList.remove('visible');
+};

@@ -43,13 +43,19 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
+            task: {
+                files: { 
+                    'assets/css/avant-modal.css': [ 'assets/css/avant-modal.css' ],
+                    'assets/css/avant-fw.css': [ 'assets/css/avant-fw.css' ]
+                }
+            },
             gzip: {
                 options : {
                     report : 'gzip'
                 },
                 files: { 
-                    'assets/css/avant-fw.css': [ 'assets/css/avant-fw.css' ],
                     'assets/css/avant-modal.css': [ 'assets/css/avant-modal.css' ],
+                    'assets/css/avant-fw.css': [ 'assets/css/avant-fw.css' ]
                 }
             }
         }
@@ -68,7 +74,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     
     // Default Task
-    grunt.registerTask('default', ['sass', 'uglify:task', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin:task', 'uglify:task', 'watch']);
     
     // Gzip Report
     grunt.registerTask('gzip', ['uglify:gzip', 'cssmin:gzip']);

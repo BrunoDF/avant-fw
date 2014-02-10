@@ -2,7 +2,7 @@
 // Modal file
 ////////////////////////////////////////////
 
-#a-m {
+#avant-modal {
     ////////////////////////////////////////////
     // Variables & Mixins
     ////////////////////////////////////////////
@@ -36,5 +36,6 @@
     @import "elements/button";
     @import "elements/default";
     @import "elements/form";
+    @import "elements/group";
     @import "elements/modal";
 }

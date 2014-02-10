@@ -22,14 +22,14 @@
     }
     
     .modal_container {
-        background: $modal_container_bg_color;
-        margin: 0 auto $margin_big*2;
+        margin: 0 auto $margin_big*5;
         opacity: 0;
+        overflow: hidden;
         position: relative;
         top: (-$modal_container_initial_position);
         width: 100%;
         
-        @include border_radius(0 0 4px 4px);
+        @include border_radius;
         @include box_shadow(0 2px 6px rgba(0,0,0,0.6));
         @include clear_fix;
         @include transition(transform, -webkit-transform, 0.5s ease-in-out, opacity 0.5s ease-in-out);
@@ -37,7 +37,7 @@
         &.visible {
             opacity: 1;
                     
-            @include transform(translate3d(0, $modal_container_initial_position,0));            
+            @include transform(translate3d(0, $modal_container_final_position,0));            
         }
         
         & > p {
@@ -49,11 +49,15 @@
         }
         
         .modal_content {
+            background: $modal_container_bg_color;
             padding: $padding_big $padding_medium;   
         }
         
         .modal_footer {
-            border-top: 1px solid $modal_footer_border_color;   
+            background: $modal_container_bg_color;
+            border-top: 1px solid $modal_footer_border_color;
+                    
+            @include clear_fix;
         }
         
         .modal_btn {

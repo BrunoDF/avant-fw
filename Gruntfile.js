@@ -8,19 +8,29 @@ module.exports = function(grunt) {
                     precision: 9
                 },
                 files: {
-                    'assets/css/avant-fw.css' : 'assets/css/sass/avant-fw.scss'
+                    'assets/css/avant-fw.css' : 'assets/css/sass/avant-fw.scss',
+                    'assets/css/avant-modal.css' : 'assets/css/sass/avant-modal.scss'
                 }
             }
         },
         uglify: {
-            my_target: {
+            task: {
                 options: {
                     mangle: true
                 },
                 files: {
                     'assets/js/main.js': ['assets/js/src/*.js']
                 }
-            }  
+            },
+            gzip: {
+                options: {
+                    mangle: true,
+                    report: 'gzip'
+                },
+                files: {
+                    'assets/js/main.js': ['assets/js/src/*.js']
+                }
+            }
         },
         watch: {
             css: {
@@ -31,11 +41,25 @@ module.exports = function(grunt) {
                 files: ['assets/js/src/*.js'],
                 tasks: ['uglify']
             }
+        },
+        cssmin: {
+            gzip: {
+                options : {
+                    report : 'gzip'
+                },
+                files: { 
+                    'assets/css/avant-fw.css': [ 'assets/css/avant-fw.css' ],
+                    'assets/css/avant-modal.css': [ 'assets/css/avant-modal.css' ],
+                }
+            }
         }
     });
     
     // Load SASS Grunt plugin - Carrega o plugin SASS do Grunt
     grunt.loadNpmTasks('grunt-contrib-sass');
+    
+    // CSSmin
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     
     // Watch
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -44,5 +68,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     
     // Default Task
-    grunt.registerTask('default', ['sass', 'uglify', 'watch']);
+    grunt.registerTask('default', ['sass', 'uglify:task', 'watch']);
+    
+    // Gzip Report
+    grunt.registerTask('gzip', ['uglify:gzip', 'cssmin:gzip']);
 };

@@ -13,6 +13,7 @@
         border-top: 1px solid $list_line_border_color;
         color: $list_line_link_color;
         font-weight: 700;
+        height: $list_item_height;
         padding: 0;
         position: relative;
         
@@ -108,7 +109,8 @@
             display: block;
             font-size: $font_size+0.2em;
             font-weight: inherit;
-            padding: $padding_medium $padding_big;
+            line-height: $list_item_height;
+            padding: 0 $padding_big;
             
             &:hover {
                 color: $list_line_link_hover_color;   

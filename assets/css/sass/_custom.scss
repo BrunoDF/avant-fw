@@ -4,3 +4,16 @@
 body {
     padding-top: $menu_height;
 }
+
+.list {
+    li::before {
+        content: '#'attr(data-task-id);
+        float: left;
+        font-size: $font-size - 0.4em;
+        line-height: $list_item_height;
+        margin: 0 $margin_small;
+        position: relative;
+        pointer-events: none;
+        vertical-align: middle;
+    }
+}

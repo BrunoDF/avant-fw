@@ -41,7 +41,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['assets/js/src/*.js'],
-                tasks: ['uglify']
+                tasks: ['uglify:task']
             }
         },
         cssmin: {

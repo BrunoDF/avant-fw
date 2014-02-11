@@ -30,7 +30,7 @@
     p {
         background: rgba(0,0,0,0.8);
         color: #fff;
-        padding: $padding_x_small;
+        padding: $padding_x_small $padding_small;
         text-align: center;
         
         @include border-radius;

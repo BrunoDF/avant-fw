@@ -1,0 +1,61 @@
+////////////////////////////////////////////
+// Tooltip
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.tooltip {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    
+    @include transition(transform, -webkit-transform, 0.5s ease-in-out, opacity 0.5s ease-in-out);
+    
+    &.visible {
+        opacity: 1;
+        
+        @include transform(translate3d(0,24px,0));
+    }
+    
+    i {
+        border: 8px solid transparent;
+        border-bottom: 8px solid rgba(0,0,0,0.8);
+        display: block;
+        height: 0;
+        margin: 0 auto;
+        width: 0;
+    }
+    
+    p {
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        padding: $padding_x_small;
+        text-align: center;
+        
+        @include border-radius;
+    }
+}
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

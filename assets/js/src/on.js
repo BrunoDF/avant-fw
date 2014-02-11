@@ -3,6 +3,7 @@ window.onload = function() {
     Message.onDocumentReady();
     Modal.onDocumentReady();
     Nav.onDocumentReady();
+    Tooltip.onDocumentReady();
 }
 
 window.onresize = function() {

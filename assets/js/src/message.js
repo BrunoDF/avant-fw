@@ -6,6 +6,7 @@ var Message = {
             msg.remove();
             msg.removeEventListener('transitionend', hideMsg, true);
         };
+        
         msg.style.height = 0;
         msg.addEventListener('transitionend', hideMsg, true);
     },

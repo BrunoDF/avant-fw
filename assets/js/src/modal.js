@@ -46,11 +46,3 @@ var Modal = {
     },
     trigger: document.querySelectorAll('[data-modal-target]')
 }
-
-
-
-var hideModalChild = function(modal) {
-    modal.firstElementChild.removeEventListener('transitionend', callHideModal(modal), true);
-    modal.addEventListener('transitionend', callHideModalChild(modal), true);
-    modal.classList.remove('visible');
-};

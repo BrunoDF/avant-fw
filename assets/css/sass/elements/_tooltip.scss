@@ -14,8 +14,6 @@
     
     &.visible {
         opacity: 1;
-        
-        @include transform(translate3d(0,24px,0));
     }
     
     i {

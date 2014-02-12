@@ -8,7 +8,7 @@ var Tooltip = {
         
         Tooltip.position(el, tooltip);
     },
-    hide: function() {
+  /*  hide: function() {
         var tooltip = document.querySelectorAll('.tooltip');
         var removeTooltip = function() {
             for (var i=0; i < tooltip.length; i++) {
@@ -21,7 +21,7 @@ var Tooltip = {
             tooltip[i].addEventListener('transitionend', removeTooltip, true);
             tooltip[i].classList.remove('visible');
         }
-    },
+    },*/
     onDocumentReady: function() {
         for (var i=0; i < Tooltip.trigger.onHover.length; i++) {
             Tooltip.trigger.onHover[i].onmouseover = function() {
@@ -47,11 +47,11 @@ var Tooltip = {
         var tooltipDistance = (el.offsetHeight - (tooltip.firstChild.offsetHeight - 4));
         var posTop = el.offsetTop;
         var posLeft = el.offsetLeft;
-        var center = (el.offsetWidth - tooltip.offsetWidth) / 2;
+        var posCenter = (el.offsetWidth - tooltip.offsetWidth) / 2;
         
-        tooltip.style.top = posTop + tooltipDistance;
-        tooltip.style.left = posLeft;
-        tooltip.style.marginLeft = center;
+        tooltip.style.top = posTop + tooltipDistance + 'px';
+        tooltip.style.left = posLeft + 'px';
+        tooltip.style.marginLeft = posCenter + 'px';
         
         setTimeout(function() { 
             tooltip.classList.add('visible');

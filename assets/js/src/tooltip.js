@@ -8,7 +8,7 @@ var Tooltip = {
         
         Tooltip.position(el, tooltip);
     },
-  /*  hide: function() {
+    hide: function() {
         var tooltip = document.querySelectorAll('.tooltip');
         var removeTooltip = function() {
             for (var i=0; i < tooltip.length; i++) {
@@ -21,7 +21,7 @@ var Tooltip = {
             tooltip[i].addEventListener('transitionend', removeTooltip, true);
             tooltip[i].classList.remove('visible');
         }
-    },*/
+    },
     onDocumentReady: function() {
         for (var i=0; i < Tooltip.trigger.onHover.length; i++) {
             Tooltip.trigger.onHover[i].onmouseover = function() {

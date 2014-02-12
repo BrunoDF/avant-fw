@@ -7,6 +7,7 @@
 ////////////////////////////////////////////
 .btn {
     display: inline-block;
+    height: $btn_height + 2px;
     line-height: $btn_height;
     outline: none;
     padding: 0 $padding_medium;

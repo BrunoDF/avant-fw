@@ -1,0 +1,76 @@
+////////////////////////////////////////////
+// Filter
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// Small - Default
+////////////////////////////////////////////
+.filter {
+    background: $filter_bg_color;
+    padding: $padding_small;
+    width: 100%;
+    
+    @include border_radius;
+    @include clear_fix;
+    
+    .filter_fields, .filter_submit {
+        float: left;
+        
+        input, select, button, a {
+            margin: 0;
+        }
+    }
+    
+    .filter_fields {
+        padding: 0;
+        width: 100%;
+        
+        label {
+            background: $filter_label_bg_color;
+            color: $filter_label_color;
+            padding: ($padding_x_small - 2px) $padding_x_small;
+            text-align: center;
+            
+            @include border_radius;
+        }
+    }
+    
+    .filter_submit {
+        padding: $padding_small 0 0 0;
+        width: 100%;
+    }
+}
+
+
+////////////////////////////////////////////
+// Tablet
+////////////////////////////////////////////
+@media (min-width: $medium_scr) {
+    
+}
+
+
+////////////////////////////////////////////
+// Desktop
+////////////////////////////////////////////
+@media (min-width: $big_scr) {
+    .filter {
+        .filter_fields {
+            padding: 0 $padding_medium 0 0;
+            width: (8.333333333% * 11);
+        }
+        
+        .filter_submit {
+            padding: 1.35em 0 0 0;
+            width: 8.333333333%;
+        }
+    }
+}
+
+
+////////////////////////////////////////////
+// Large Desktop
+////////////////////////////////////////////
+@media (min-width: $larger_scr) {
+   
+}

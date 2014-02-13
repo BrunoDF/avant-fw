@@ -18,7 +18,7 @@
     
     i {
         border: 8px solid transparent;
-        border-bottom: 8px solid rgba(0,0,0,0.8);
+        border-bottom: 8px solid $tooltip_bg_color;
         display: block;
         height: 0;
         margin: 0 auto;
@@ -26,8 +26,8 @@
     }
     
     p {
-        background: rgba(0,0,0,0.8);
-        color: #fff;
+        background: $tooltip_bg_color;
+        color: $tooltip_color;
         padding: $padding_x_small $padding_small;
         text-align: center;
         

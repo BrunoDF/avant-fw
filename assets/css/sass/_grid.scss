@@ -36,7 +36,6 @@
     
     @for $i from 1 through 12 {
         &.size_#{$i} {
-            //background: #666;
             padding: $padding_small $padding_medium;
             width: 100%;
             

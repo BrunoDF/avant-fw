@@ -109,6 +109,14 @@ $border_main_color: #ccc;
 
 
 ////////////////////////////////////////////
+// Tooltip
+////////////////////////////////////////////
+$filter_bg_color: lighten($main_color, 30%);
+$filter_label_bg_color: rgba(100, 149, 237,0.1);
+$filter_label_color: $main_color;
+
+
+////////////////////////////////////////////
 // Input
 ////////////////////////////////////////////
 $input_color: #666;
@@ -188,6 +196,13 @@ $table_cell_main_border_color: darken($main_color, 10%);
 $table_cell_main_color: #fff;
 $table_top_divider_color: $main_color;
 $table_bottom_divider_color: $table_top_divider_color;
+
+
+////////////////////////////////////////////
+// Tooltip
+////////////////////////////////////////////
+$tooltip_bg_color: rgba(0,0,0,0.8);
+$tooltip_color: #fff;
 
 
 ////////////////////////////////////////////

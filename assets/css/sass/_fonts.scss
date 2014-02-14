@@ -47,6 +47,48 @@ a, p, label, button, input, select, textarea {
 
 
 ////////////////////////////////////////////
+// Fontello
+////////////////////////////////////////////
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  //width: 1em;
+  margin-right: .4em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 0;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0;
+ 
+  /* you can be more comfortable with increased icons size */
+  font-size: 150%;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+  vertical-align: middle;
+}
+ 
+.icon-user:before { content: '\e802'; } /* '' */
+.icon-menu:before { content: '\e805'; } /* '' */
+.icon-cancel-circled:before { content: '\e800'; } /* '' */
+.icon-down-open-mini:before { content: '\e801'; } /* '' */
+
+
+////////////////////////////////////////////
 // Tablet
 ////////////////////////////////////////////
 @media (min-width: $medium_scr) {

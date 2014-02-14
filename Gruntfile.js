@@ -19,8 +19,8 @@ module.exports = function(grunt) {
                     mangle: true
                 },
                 files: {
-                    'assets/js/main.js': ['assets/js/src/*.js'],
-                    'assets/js/avant-modal.js': ['assets/js/src/modal.js'],
+                    'assets/js/main.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
+                    'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/on/modal_on.js'],
                 }
             },
             gzip: {
@@ -29,8 +29,8 @@ module.exports = function(grunt) {
                     report: 'gzip'
                 },
                 files: {
-                    'assets/js/main.js': ['assets/js/src/*.js'],
-                    'assets/js/avant-modal.js': ['assets/js/src/modal.js'],
+                    'assets/js/main.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
+                    'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/on/modal_on.js'],
                 }
             }
         },
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             },
             js: {
-                files: ['assets/js/src/*.js'],
+                files: ['assets/js/src/**'],
                 tasks: ['uglify:task']
             }
         },

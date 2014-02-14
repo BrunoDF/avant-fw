@@ -1,5 +1,7 @@
+var modal;
+
 var Modal = {
-    close: function(modal) {
+    close: function() {
         var hideModal = function() {
             modal.removeEventListener('transitionend', hideModal, true);
             modal.style.display = "none";
@@ -23,7 +25,7 @@ var Modal = {
         }
     },
     open: function(id) {
-        var modal = document.getElementById(id);
+        modal = document.getElementById(id);
         modal.style.display = "block";
         setTimeout(function() { 
             modal.classList.add('visible');
@@ -33,11 +35,11 @@ var Modal = {
         document.body.style.overflow = 'hidden';
         
         modal.getElementsByClassName('modal_btn')[0].onclick = function() {
-            Modal.close(modal);
+            Modal.close();
         }
         
         modal.onclick = function() {
-            Modal.close(modal);
+            Modal.close();
         }
         
         modal.firstElementChild.onclick = function(event) {

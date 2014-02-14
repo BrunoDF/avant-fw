@@ -1,7 +1,7 @@
 var Nav = {
     menu: document.getElementsByClassName('nav_menu')[0],
     btn: document.getElementsByClassName('menu_btn'),
-    onDocumentReady: function() {
+    init: function() {
         for (var i=0; i < Nav.btn.length; i++) {
             Nav.btn[i].onclick = function() {
                 Nav.toggle();

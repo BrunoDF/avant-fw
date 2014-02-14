@@ -14,7 +14,7 @@ var Modal = {
         }, 100);
         
     },
-    onDocumentReady: function() {
+    init: function() {
         for (var i=0; i < Modal.trigger.length; i++) {
             Modal.trigger[i].onclick = function() {
                 var modalId = this.getAttribute('data-modal-target');

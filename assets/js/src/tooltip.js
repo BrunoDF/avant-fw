@@ -22,7 +22,7 @@ var Tooltip = {
             tooltip[i].classList.remove('visible');
         }
     },
-    onDocumentReady: function() {
+    init: function() {
         for (var i=0; i < Tooltip.trigger.onHover.length; i++) {
             Tooltip.trigger.onHover[i].onmouseover = function() {
                 Tooltip.show(this);

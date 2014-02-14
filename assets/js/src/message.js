@@ -10,7 +10,7 @@ var Message = {
         msg.style.height = 0;
         msg.addEventListener('transitionend', hideMsg, true);
     },
-    onDocumentReady: function() {
+    init: function() {
         for (var i=0; i < Message.list.length; i++) {
             var msgHeight = Message.list[i].offsetHeight;
             Message.list[i].style.height = msgHeight+"px";

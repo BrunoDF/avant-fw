@@ -1,6 +1,6 @@
 var Dropdown = {
     btn: document.getElementsByClassName('dropdown_btn'),
-    onDocumentReady: function() {
+    init: function() {
         var arr = Array.prototype.slice.call(Dropdown.btn);
 
         for (var i=0;i < Dropdown.btn.length; i++) {

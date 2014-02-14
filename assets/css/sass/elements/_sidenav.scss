@@ -15,12 +15,14 @@
         li {
             line-height: 34px;
             
-            a {
+            a, p, label {
                 color: $side_nav_link_main_color;
                 display: inline-block;
                 padding: 0 $padding_medium;
                 width: 100%;
-                
+            }
+            
+            a {
                 &:hover {
                     background: $side_nav_link_bg_hover_color;
                     color: $side_nav_link_hover_color;
@@ -49,7 +51,7 @@
         padding: 0 0 $padding_small 0;
         
         & > li {
-            a {
+            a, p, label {
                 font-size: $font_size - 0.2em;
                 padding: 0 $padding_big+10px; 
             }

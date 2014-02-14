@@ -1,21 +1,21 @@
-var modal;
-
 var Modal = {
     close: function() {
         var hideModal = function() {
-            modal.removeEventListener('transitionend', hideModal, true);
-            modal.style.display = "none";
+            Modal.current.removeEventListener('transitionend', hideModal, true);
+            Modal.current.style.display = "none";
+            Modal.current = undefined;
             document.body.style.overflow = 'auto';
         };
         
-        modal.firstElementChild.classList.remove('visible');
+        Modal.current.firstElementChild.classList.remove('visible');
         
         setTimeout(function() {
-            modal.classList.remove('visible');
-            modal.addEventListener('transitionend', hideModal, true);
+            Modal.current.classList.remove('visible');
+            Modal.current.addEventListener('transitionend', hideModal, true);
         }, 100);
         
     },
+    current: undefined,
     init: function() {
         for (var i=0; i < Modal.trigger.length; i++) {
             Modal.trigger[i].onclick = function() {
@@ -25,24 +25,24 @@ var Modal = {
         }
     },
     open: function(id) {
-        modal = document.getElementById(id);
-        modal.style.display = "block";
+        Modal.current = document.getElementById(id);
+        Modal.current.style.display = "block";
         setTimeout(function() { 
-            modal.classList.add('visible');
-            modal.firstElementChild.classList.add('visible');
+            Modal.current.classList.add('visible');
+            Modal.current.firstElementChild.classList.add('visible');
         }, 100);
         
         document.body.style.overflow = 'hidden';
         
-        modal.getElementsByClassName('modal_btn')[0].onclick = function() {
+        Modal.current.getElementsByClassName('modal_btn')[0].onclick = function() {
             Modal.close();
         }
         
-        modal.onclick = function() {
+        Modal.current.onclick = function() {
             Modal.close();
         }
         
-        modal.firstElementChild.onclick = function(event) {
+        Modal.current.firstElementChild.onclick = function(event) {
             event.stopPropagation();   
         }
     },

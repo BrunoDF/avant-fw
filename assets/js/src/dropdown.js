@@ -30,7 +30,7 @@ var Dropdown = {
     toggle: function(el) {
         el.parentNode.classList.toggle('visible');
         
-        if (Dropdown.visible) {
+        if (Dropdown.visible !== undefined) {
             document.body.onclick = function() {
                 Dropdown.close();
                 Dropdown.visible = undefined;

@@ -10,10 +10,10 @@ var Dropdown = {
 
         for (var i=0;i < Dropdown.btn.length; i++) {
             Dropdown.btn[i].onclick = function(event) {
+                Dropdown.visible = arr.indexOf(this);
+                
                 Dropdown.toggle(this);
                 event.stopPropagation();
-                
-                Dropdown.visible = arr.indexOf(this);
                 
                 for (var j=0;j < Dropdown.btn.length; j++) {
                     if (j !== Dropdown.visible) {

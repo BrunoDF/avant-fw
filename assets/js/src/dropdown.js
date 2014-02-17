@@ -1,11 +1,18 @@
 var Dropdown = {
     btn: document.getElementsByClassName('dropdown_btn'),
+    close: function() {
+        for (var i=0;i < Dropdown.btn.length; i++) {
+            Dropdown.btn[i].parentNode.classList.remove('visible');
+        }
+    },
     init: function() {
         var arr = Array.prototype.slice.call(Dropdown.btn);
 
         for (var i=0;i < Dropdown.btn.length; i++) {
-            Dropdown.btn[i].onclick = function() {
+            Dropdown.btn[i].onclick = function(event) {
                 Dropdown.toggle(this);
+                event.stopPropagation();
+                
                 Dropdown.visible = arr.indexOf(this);
                 
                 for (var j=0;j < Dropdown.btn.length; j++) {
@@ -14,16 +21,22 @@ var Dropdown = {
                     }
                 }
             }
-        }  
+        }
     },
     onWindowResize: function() {
-        for (var i=0;i < Dropdown.btn.length; i++) {
-            Dropdown.btn[i].parentNode.classList.remove('visible');
-        }
+        Dropdown.close()
     },
     visible: undefined,
     toggle: function(el) {
         el.parentNode.classList.toggle('visible');
+        
+        if (Dropdown.visible) {
+            document.body.onclick = function() {
+                Dropdown.close();
+                Dropdown.visible = undefined;
+            }
+        }
     }
 }
+
 

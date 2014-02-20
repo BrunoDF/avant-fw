@@ -26,6 +26,10 @@
             @include border_radius(0 0 4px 4px);
         }
         
+        &:only-child {
+            @include border_radius;
+        }
+        
         &:hover {
             background: $list_line_hover_bg_color;   
         }

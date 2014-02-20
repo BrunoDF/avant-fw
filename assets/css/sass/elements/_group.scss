@@ -52,6 +52,12 @@
                     @include border_radius(0 4px 4px 0);
                 }
             }
+            
+            &:only-child {
+                .btn {
+                    @include border_radius;
+                }
+            }
         }
     }
 }

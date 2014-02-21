@@ -21,3 +21,21 @@ body {
         vertical-align: middle;
     }
 }
+
+////////////////////////////////////////////
+// Paginator
+////////////////////////////////////////////
+.pagebanner, .pagelinks {
+    background: #eee;
+    display: inline-block;
+    margin: 0 0 $margin_x_small 0;
+    padding: $padding_x_small;
+}
+
+.pagebanner {
+    @include border_radius(4px 0 0 4px);   
+}
+
+.pagelinks {
+    @include border_radius(0 4px 4px 0);   
+}

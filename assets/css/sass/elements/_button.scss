@@ -39,6 +39,18 @@
         }
     }
     
+    &.btn_warning {
+        border: 1px solid $btn_warning_border_color;
+        color: $btn_warning_color;
+        
+        @include linear_gradient(to bottom, top, #ed6464, #c35050 130%);
+        
+        &:hover {
+            color: $btn_warning_hover_color;
+            @include linear_gradient(to bottom, top, #ed6464, darken(#c35050, 10%) 130%);
+        }
+    }
+    
     &.btn_main {
         border: 1px solid $btn_main_border_color;
         color: $btn_main_color;

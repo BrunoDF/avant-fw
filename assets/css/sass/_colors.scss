@@ -96,6 +96,11 @@ $btn_border_color: $link_btn_color;
 $btn_hover_color: $main_color;
 $btn_hover_bg_color: $link_btn_color;
 
+$btn_warning_color: #dfdfdf;
+$btn_warning_border_color: darken(#ed6464, 10%);
+$btn_warning_hover_color: #fff;
+$btn_warning_hover_bg_color: $link_btn_color;
+
 $btn_main_color: #dfdfdf;
 $btn_main_border_color: darken($main_color, 10%);
 $btn_main_hover_color: #fff;

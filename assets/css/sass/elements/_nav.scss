@@ -7,6 +7,14 @@
 // Small - Default
 ////////////////////////////////////////////
 .nav {
+    background: $nav_main_color;
+    height: $menu_height;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    
+    @include border-radius;
+    
     .menu_btn {
         background: none;
         border: 0;
@@ -31,14 +39,6 @@
             color: $menu_btn_active_color;   
         }
     }
-    
-    background: $nav_main_color;
-    height: $menu_height;
-    margin: 0 auto;
-    padding: 0 $padding_small;
-    width: 100%;
-    
-    @include border-radius;
     
     &.nav_fixed {
         left: 0;
@@ -82,7 +82,7 @@
         font-size: $font_size+1em;
         font-weight: 700;
         line-height: $menu_height;
-        padding: 0 $padding_medium;
+        padding: 0 $padding_small;
     }
     
 }

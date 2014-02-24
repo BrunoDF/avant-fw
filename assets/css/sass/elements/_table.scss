@@ -17,7 +17,8 @@
             empty-cells: show;
             text-align: center;
             vertical-align: middle;
-            word-break: break-word;
+            
+            
             
             &:first-child {
                 border-left: 1px solid $table_border_color; 
@@ -102,7 +103,13 @@
 // Desktop
 ////////////////////////////////////////////
 @media (min-width: $big_scr) {
-    
+    .table {
+        tr {
+            td, th {
+                word-break: break-word;
+            }
+        }
+    }
 }
 
 

@@ -19,7 +19,7 @@ module.exports = function(grunt) {
                     mangle: true
                 },
                 files: {
-                    'assets/js/main.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
+                    'assets/js/avant-fw.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
                     'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/on/modal_on.js'],
                 }
             },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     report: 'gzip'
                 },
                 files: {
-                    'assets/js/main.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
+                    'assets/js/avant-fw.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
                     'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/on/modal_on.js'],
                 }
             }

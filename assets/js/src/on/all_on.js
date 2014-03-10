@@ -3,6 +3,7 @@ window.onload = function() {
     Message.init();
     Modal.init();
     Nav.init();
+    InputRC.init();
     Tooltip.init();
 }
 

@@ -52,7 +52,12 @@ select {
     }
 }
 
-.selectors {
+.input_rc {
+    display: block;
+    margin: 0 0 $margin_small 0;
+    
+    @include clear_fix;
+    
     li {
         background: $selector_bg_color;
         border: 1px solid $selector_border_color;

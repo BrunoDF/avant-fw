@@ -52,6 +52,37 @@ select {
     }
 }
 
+.selectors {
+    li {
+        background: $selector_bg_color;
+        border: 1px solid $selector_border_color;
+        border-left: 0;
+        float: left;
+        line-height: $btn_height;
+        padding: 0 $padding_small;
+        
+        &:first-child {
+            border-left: 1px solid $selector_border_color;
+            
+            @include border_radius(4px 0 0 4px);
+        }
+        
+        &:last-child {
+            @include border_radius(0 4px 4px 0);
+        }
+        
+        &:only-child {
+            @include border_radius;
+        }
+        
+        input[type="radio"], input[type="checkbox"],
+        p, label, span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
 textarea {
     min-height: 120px;
     resize: none;

@@ -213,6 +213,13 @@ $tooltip_color: #fff;
 ////////////////////////////////////////////
 // Side Nav
 ////////////////////////////////////////////
+$selector_bg_color: #eee;
+$selector_border_color: $link_btn_border_color;
+
+
+////////////////////////////////////////////
+// Side Nav
+////////////////////////////////////////////
 $side_nav_bg_color: lighten($main_color, 30%);
 $side_nav_link_main_color: #716b7a;
 $side_nav_link_hover_color: #fff;

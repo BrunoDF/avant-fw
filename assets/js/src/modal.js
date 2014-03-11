@@ -14,6 +14,7 @@ var Modal = {
             Modal.current.addEventListener('transitionend', hideModal, true);
         }, 100);
         
+        return false;
     },
     current: undefined,
     init: function() {

@@ -17,6 +17,7 @@
 #avant-modal-container {
     font-size: 62.5%;
     
+    
     ////////////////////////////////////////////
     // Reset
     ////////////////////////////////////////////
@@ -44,4 +45,47 @@
     @import "elements/form";
     @import "elements/group";
     @import "elements/modal";
+    
+    
+    .openTicket {
+        border: 1px solid $open_ticket_border_color;
+        border-bottom: 0;
+        bottom: 0;
+        color: $open_ticket_color;
+        font-size: $open_ticket_font_size;
+        font-weight: bold;
+        height: $open_ticket_height + 1px;
+        line-height: $open_ticket_height;
+        outline: none;
+        padding: 0 $padding_small;
+        position: fixed;
+        right: 20px;
+        width: auto;
+        
+        @include border-radius(4px 4px 0 0);
+        @include linear_gradient(to bottom, top, $open_ticket_bg_color_1, $open_ticket_bg_color_2 130%);
+        @include text-shadow(0 1px 0 rgba(0,0,0,0.2));
+        
+        &::before {
+            content: '\e803';
+            font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+            display: inline-block;
+            text-decoration: inherit;
+            margin-right: .4em;
+            text-align: center;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 0;
+            margin-left: 0;
+            font-size: 150%;
+            vertical-align: middle;
+        }
+        
+        &:hover {
+            @include linear_gradient(to bottom, top, $open_ticket_bg_color_1, darken($open_ticket_bg_color_2, 10%) 130%);
+        }
+    }
 }

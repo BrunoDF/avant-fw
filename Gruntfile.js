@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'assets/js/avant-fw.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
-                    'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/on/modal_on.js'],
+                    'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/message.js', 'assets/js/src/input_rc.js', 'assets/js/src/on/modal_on.js'],
                 }
             },
             gzip: {
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'assets/js/avant-fw.js': ['assets/js/src/*.js', 'assets/js/src/on/all_on.js'],
-                    'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/on/modal_on.js'],
+                    'assets/js/avant-modal.js': ['assets/js/src/modal.js', 'assets/js/src/message.js', 'assets/js/src/input_rc.js', 'assets/js/src/on/modal_on.js'],
                 }
             }
         },

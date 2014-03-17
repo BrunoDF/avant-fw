@@ -256,6 +256,7 @@ figure {
 
 fieldset {
     border: 1px solid #c0c0c0; /* 1 */
+    display: table-cell;
     margin: 0; /* 1 */
     min-width: 0; /* 2 */
 }

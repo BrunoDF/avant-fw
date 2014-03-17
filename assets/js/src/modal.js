@@ -23,6 +23,22 @@ var Modal = {
             }
         }
     },
+    loader: (function() {
+        var elem = document.getElementsByClassName('modal_loader')[0];
+        
+        if (typeof document.getElementsByClassName('modal_loader')[0] !== 'undefined') {
+            var opcoes = {
+                show: function() {
+                    elem.classList.add('visible');
+                },
+                hide: function() {
+                    elem.classList.remove('visible');
+                }
+            };
+        }
+        
+        return opcoes;
+    })(),
     open: function(id) {
         Modal.current = document.getElementById(id);
         Modal.current.style.display = "block";
@@ -37,13 +53,13 @@ var Modal = {
             Modal.close();
         }
         
-        Modal.current.onclick = function() {
+        /*Modal.current.onclick = function() {
             Modal.close();
         }
         
         Modal.current.firstElementChild.onclick = function(event) {
             event.stopPropagation();   
-        }
+        }*/
     },
     trigger: document.querySelectorAll('[data-modal-target]')
 }

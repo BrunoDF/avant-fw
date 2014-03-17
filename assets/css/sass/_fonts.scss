@@ -81,7 +81,8 @@ a, p, label, button, input, select, textarea {
 
   vertical-align: middle;
 }
- 
+
+.icon-spin5:before { content: '\e806'; } /* '' */
 .icon-user:before { content: '\e802'; } /* '' */
 .icon-menu:before { content: '\e805'; } /* '' */
 .icon-cancel-circled:before { content: '\e800'; } /* '' */

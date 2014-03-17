@@ -5,6 +5,10 @@
 ////////////////////////////////////////////
 // Small - Default
 ////////////////////////////////////////////
+form {
+    padding: $padding_small 0 0 0;
+}
+
 input[type="text"], input[type="password"], textarea, select {
     border: 1px solid $input_border_color;
     outline: none;

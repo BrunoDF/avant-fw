@@ -50,6 +50,28 @@
     }
 }
 
+@-moz-keyframes bounce {
+    0% {
+        @include transform(translate3d(0,0,0));
+    }
+    
+    10% {
+        @include transform(translate3d(-1.5%,0,0));
+    }
+    
+    20% {
+        @include transform(translate3d(0.3%,0,0));
+    }
+    
+    28% {
+        @include transform(translate3d(-0.8%,0,0));
+    }
+    
+    34% {
+        @include transform(translate3d(0,0,0));
+    }
+}
+
 @keyframes glow {
     0% {
         opacity: 0.6;
@@ -70,6 +92,97 @@
     }
 }
 
+@-moz-keyframes glow {
+    0% {
+        opacity: 0.6;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, 0deg);
+    -o-transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, 359deg);
+    -o-transform: rotate3d(0, 0, 1, 359deg);
+    -webkit-transform: rotate3d(0, 0, 1, 359deg);
+    transform: rotate3d(0, 0, 1, 359deg);
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, 0deg);
+    -o-transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, -240deg);
+    -o-transform: rotate3d(0, 0, 1, -240deg);
+    -webkit-transform: rotate3d(0, 0, 1, -240deg);
+    transform: rotate3d(0, 0, 1, -240deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, 0deg);
+    -o-transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, 359deg);
+    -o-transform: rotate3d(0, 0, 1, 359deg);
+    -webkit-transform: rotate3d(0, 0, 1, 359deg);
+    transform: rotate3d(0, 0, 1, 359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, 0deg);
+    -o-transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, 359deg);
+    -o-transform: rotate3d(0, 0, 1, 359deg);
+    -webkit-transform: rotate3d(0, 0, 1, 359deg);
+    transform: rotate3d(0, 0, 1, 359deg);
+  }
+}
+
+
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, 0deg);
+    -o-transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, 359deg);
+    -o-transform: rotate3d(0, 0, 1, 359deg);
+    -webkit-transform: rotate3d(0, 0, 1, 359deg);
+    transform: rotate3d(0, 0, 1, 359deg);
+  }
+}
+
 
 ////////////////////////////////////////////
 // Bounce
@@ -84,4 +197,12 @@
 ////////////////////////////////////////////
 .glow {
     @include animation(glow, 0.5s, linear, 0s, infinite, alternate);
+}
+
+
+////////////////////////////////////////////
+// Spin
+////////////////////////////////////////////
+.spin {
+    @include animation(spin, 2s, ease-in-out, 0s, infinite, normal);
 }

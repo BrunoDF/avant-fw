@@ -82,14 +82,32 @@ a, p, label, button, input, select, textarea {
   vertical-align: middle;
 }
 
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    display: block;
+    line-height: normal;
+    margin: 0.6em 0.4em;
+}
+
+.table {
+    i[class^="icon-"]:before, i[class*=" icon-"]:before {
+        font-size: 100%;
+    }
+}
+
 .icon-spin5:before { content: '\e806'; } /* '' */
-.icon-ok:before { content: '\e804'; } /* '' */
+.icon-down-open-mini:before { content: '\e801'; } /* '' */
 .icon-cancel:before { content: '\e807'; } /* '' */
+.icon-pencil-squared:before { content: '\e80d'; } /* '' */
+.icon-list-bullet:before { content: '\e809'; } /* '' */
 .icon-user:before { content: '\e802'; } /* '' */
-.icon-menu:before { content: '\e805'; } /* '' */
+.icon-users:before { content: '\e80a'; } /* '' */
+.icon-ok:before { content: '\e804'; } /* '' */
 .icon-cancel-circled:before { content: '\e800'; } /* '' */
 .icon-info-circled:before { content: '\e803'; } /* '' */
-.icon-down-open-mini:before { content: '\e801'; } /* '' */
+.icon-chat:before { content: '\e80b'; } /* '' */
+.icon-trash-1:before { content: '\e808'; } /* '' */
+.icon-block:before { content: '\e80e'; } /* '' */
+.icon-menu:before { content: '\e805'; } /* '' */
 
 
 ////////////////////////////////////////////
@@ -116,6 +134,14 @@ a, p, label, button, input, select, textarea {
     
     .title {
         width: 60%;   
+    }
+    
+    ////////////////////////////////////////////
+    // Fontello
+    ////////////////////////////////////////////
+    i[class^="icon-"]:before, i[class*=" icon-"]:before {
+        display: inline-block;
+        margin: 0 0.4em;
     }
 }
 

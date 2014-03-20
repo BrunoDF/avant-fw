@@ -37,5 +37,11 @@ body {
 }
 
 .pagelinks {
-    @include border_radius(0 4px 4px 0);   
+    @include border_radius(0 4px 4px 0); 
+    
+    a {
+        color: #333;
+        font-size: $font-size - 0.4em;
+        text-decoration: underline;
+    }
 }

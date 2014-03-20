@@ -90,6 +90,7 @@ select {
         input[type="radio"], input[type="checkbox"],
         p, label, span {
             display: inline-block;
+            margin: 0;
             vertical-align: middle;
         }
     }

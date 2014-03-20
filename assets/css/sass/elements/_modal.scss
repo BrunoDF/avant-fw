@@ -89,6 +89,36 @@
             }
         }
         
+        .modal_success {
+            p {
+                text-align: center;
+                
+                &:before {
+                    content: '\e804';
+                    font-family: "fontello";
+                    font-style: normal;
+                    font-weight: normal;
+                    speak: none;
+                    display: block;
+                    text-decoration: inherit;
+                    text-align: center;
+                    font-variant: normal;
+                    text-transform: none;
+                    vertical-align: middle;
+                    line-height: 70px;
+                    
+                    color: $main_color;
+                    font-size: 96px;
+                    height: 70px;
+                    margin: 0 auto $margin_medium;
+                    position: relative;
+                    width: 96px;
+                    
+                    @include text-shadow(0 0 4px rgba(0,0,0,0.4));
+                }
+            }
+        }
+        
         .modal_loader {
             background: rgba(255,255,255,0.8);
             display: none;

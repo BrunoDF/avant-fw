@@ -24,6 +24,7 @@
             }
             
             &.highlight {
+                background: #6495ed;
                 border-color: $table_cell_main_border_color;
                 color: $table_cell_main_color; 
                 
@@ -64,6 +65,8 @@
     
     & > thead, & > tfoot {
         & > tr {
+            background: #dfdfdf;
+            
             @include linear_gradient(to bottom, top, #fff, #dfdfdf 130%);
             
             th, td {

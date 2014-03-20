@@ -7,10 +7,10 @@ var Modal = {
             document.body.style.overflow = 'auto';
         };
         
-        Modal.current.firstElementChild.classList.remove('visible');
+        Modal.current.firstElementChild.className = Modal.current.firstElementChild.className.replace(/\bvisible\b/, '');
         
         setTimeout(function() {
-            Modal.current.classList.remove('visible');
+            Modal.current.className = Modal.current.className.replace(/\bvisible\b/, '');
             Modal.current.addEventListener('transitionend', hideModal, true);
         }, 100);
     },
@@ -29,10 +29,10 @@ var Modal = {
         if (typeof document.getElementsByClassName('modal_loader')[0] !== 'undefined') {
             var opcoes = {
                 show: function() {
-                    elem.classList.add('visible');
+                    if (elem.className.indexOf('visible') === -1) elem.className += ' visible';
                 },
                 hide: function() {
-                    elem.classList.remove('visible');
+                    elem.className = elem.className.replace(/\bvisible\b/, '');
                 }
             };
         }
@@ -43,8 +43,8 @@ var Modal = {
         Modal.current = document.getElementById(id);
         Modal.current.style.display = "block";
         setTimeout(function() { 
-            Modal.current.classList.add('visible');
-            Modal.current.firstElementChild.classList.add('visible');
+            if (Modal.current.className.indexOf('visible') === -1) Modal.current.className += ' visible';
+            if (Modal.current.firstElementChild.className.indexOf('visible') === -1) Modal.current.firstElementChild.className += ' visible';
         }, 100);
         
         document.body.style.overflow = 'hidden';

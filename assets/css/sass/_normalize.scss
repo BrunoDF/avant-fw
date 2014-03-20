@@ -261,6 +261,10 @@ fieldset {
     min-width: 0; /* 2 */
 }
 
+#ie fieldset { /* IE fix for display:table-cell. Blame firefox this time. */
+    display: block;
+}
+
 /**
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.

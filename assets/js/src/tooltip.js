@@ -2,7 +2,7 @@ var Tooltip = {
     build: function(el) {
         var tooltip = document.createElement('div');
         var content = el.hasAttribute('data-tooltip-hover') ? el.getAttribute('data-tooltip-hover') : el.getAttribute('data-tooltip-focus');
-        tooltip.classList.add('tooltip');
+        if (tooltip.className.indexOf('visible') === -1) tooltip.className += ' visible';
         tooltip.innerHTML = '<i></i><p>'+ content +'</p>';
         document.body.appendChild(tooltip);
         
@@ -19,7 +19,7 @@ var Tooltip = {
         
         for (var i=0; i < tooltip.length; i++) {
             tooltip[i].addEventListener('transitionend', removeTooltip, true);
-            tooltip[i].classList.remove('visible');
+            tooltip[i].className = tooltip[i].className.replace(/\b visible\b/, '');
         }
     },
     init: function() {
@@ -54,7 +54,7 @@ var Tooltip = {
         tooltip.style.marginLeft = posCenter + 'px';
         
         setTimeout(function() { 
-            tooltip.classList.add('visible');
+            if (tooltip.className.indexOf('visible') === -1) tooltip.className += ' visible';
         }, 50);
     },
     show: function(el) {

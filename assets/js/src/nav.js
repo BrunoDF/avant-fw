@@ -10,10 +10,14 @@ var Nav = {
     },
     onWindowResize: function() {
         if (ScreenSize.isBig() || ScreenSize.isLarge()) {
-            Nav.menu.classList.remove('visible');
+            Nav.menu.className = Nav.menu.className.replace(/\b visible\b/, '');
         }
     },
     toggle: function() {
-        Nav.menu.classList.toggle('visible');
+        if (Nav.menu.className.indexOf('visible') !== -1) {
+            Nav.menu.className = Nav.menu.className.replace(/\b visible\b/, '');
+        } else {
+            if (Nav.menu.className.indexOf('visible') === -1) Nav.menu.className += ' visible';
+        }
     }
 };

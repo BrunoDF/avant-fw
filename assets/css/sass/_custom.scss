@@ -7,20 +7,50 @@ body {
 
 
 ////////////////////////////////////////////
-// Task ID
+// PageHeader Back
 ////////////////////////////////////////////
-.list {
-    li::before {
-        content: '#'attr(data-task-id);
-        float: left;
-        font-size: $font-size - 0.3em;
-        line-height: $list_item_height;
-        margin: 0 $margin_small;
-        position: relative;
-        pointer-events: none;
-        vertical-align: middle;
+.page_header {
+    h1 {
+        .back {
+            background: #fff;
+            border: 0;
+            display: inline-block;
+            color: $main_color;
+            float: left;
+            font-size: 1em;
+            font-weight: 700;
+            height: $btn_height;
+            margin-right: 0.4em;
+            padding: 0;
+            width: $btn_height;
+            
+            @include border_radius(50%);
+            
+            &:hover {
+                background: #ccc;
+            }
+            
+            &::after {
+                content: '\e80c';
+                font-family: "fontello";
+                font-style: inherit;
+                font-weight: inherit;
+                speak: none;
+                display: inline-block;
+                text-decoration: inherit;
+                margin-right: 0;
+                text-align: center;
+                font-variant: normal;
+                text-transform: none;
+                font-size: 100%;
+                line-height: $btn_height;
+                width: 100%;
+                padding-right: 0.2em;
+            }
+        }
     }
 }
+
 
 ////////////////////////////////////////////
 // Paginator
@@ -43,5 +73,21 @@ body {
         color: #333;
         font-size: $font-size - 0.4em;
         text-decoration: underline;
+    }
+}
+
+////////////////////////////////////////////
+// Task ID
+////////////////////////////////////////////
+.list {
+    li::before {
+        content: '#'attr(data-task-id);
+        float: left;
+        font-size: $font-size - 0.3em;
+        line-height: $list_item_height;
+        margin: 0 $margin_small;
+        position: relative;
+        pointer-events: none;
+        vertical-align: middle;
     }
 }

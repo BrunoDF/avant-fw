@@ -5,10 +5,8 @@ var Tooltip = {
         tooltip.className = "tooltip";
         tooltip.innerHTML = '<i></i><p>'+ content +'</p>';
         document.body.appendChild(tooltip);
-        
+
         Tooltip.position(el, tooltip);
-        
-        if (tooltip.className.indexOf('visible') === -1) tooltip.className += ' visible';
     },
     hide: function() {
         var tooltip = document.querySelectorAll('.tooltip');
@@ -62,5 +60,6 @@ var Tooltip = {
     show: function(el) {
         Tooltip.build(el);
     },
-    trigger: { onHover: document.querySelectorAll('[data-tooltip-hover]'), onFocus: document.querySelectorAll('[data-tooltip-focus]') }
+    trigger: { onHover: document.querySelectorAll('[data-tooltip-hover]'),
+               onFocus: document.querySelectorAll('[data-tooltip-focus]') }
 }

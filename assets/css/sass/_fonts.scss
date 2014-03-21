@@ -82,6 +82,10 @@ a, p, label, button, input, select, textarea {
   vertical-align: middle;
 }
 
+i[class^="icon-"], i[class*=" icon-"] {
+    position: relative;
+}
+
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
     display: block;
     line-height: normal;

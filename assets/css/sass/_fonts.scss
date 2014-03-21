@@ -26,6 +26,8 @@ a, p, label, button, input, select, textarea {
     
     h1 {
         font-size: $font_size + 1em;
+        height: $btn_height;
+        line-height: $btn_height;
         margin: 0 auto;
         padding: 0 $padding_medium;
     }
@@ -157,7 +159,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
                     font-size: 100%;
                     line-height: $btn_height;
                     width: 100%;
-                    padding-right: 0.2em;
+                    padding: 0.04em 0.2em 0 0;
                 }
             }
         }

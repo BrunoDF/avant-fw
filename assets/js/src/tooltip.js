@@ -2,11 +2,13 @@ var Tooltip = {
     build: function(el) {
         var tooltip = document.createElement('div');
         var content = el.hasAttribute('data-tooltip-hover') ? el.getAttribute('data-tooltip-hover') : el.getAttribute('data-tooltip-focus');
-        if (tooltip.className.indexOf('visible') === -1) tooltip.className += ' visible';
+        tooltip.className = "tooltip";
         tooltip.innerHTML = '<i></i><p>'+ content +'</p>';
         document.body.appendChild(tooltip);
         
         Tooltip.position(el, tooltip);
+        
+        if (tooltip.className.indexOf('visible') === -1) tooltip.className += ' visible';
     },
     hide: function() {
         var tooltip = document.querySelectorAll('.tooltip');

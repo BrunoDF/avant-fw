@@ -6,10 +6,14 @@
 // Small - Default
 ////////////////////////////////////////////
 .msg {
-    margin: 0 auto;
+    margin: $margin_small auto 0;
     overflow: hidden;
     
     @include transition(height, height, 0.5s ease-in-out);
+    
+    &:first-child {
+        margin: 0 auto;
+    }
     
     p {
         font-size: $font_size+0.4em;
@@ -113,10 +117,6 @@
                 }
             }
         }
-    }
-    
-    & + .msg {
-           
     }
 }
 

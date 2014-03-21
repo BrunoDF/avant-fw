@@ -121,7 +121,45 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 @media (min-width: $medium_scr) {
     .page_header {
         h1 {
-           width: $container_medium; 
+            width: $container_medium;
+            
+            .back {
+                background: #fff;
+                border: 0;
+                display: inline-block;
+                color: $main_color;
+                float: left;
+                font-size: 1em;
+                font-weight: 700;
+                height: $btn_height;
+                margin-right: 0.4em;
+                padding: 0;
+                width: $btn_height;
+
+                @include border_radius(50%);
+
+                &:hover {
+                    background: #ccc;
+                }
+
+                &::after {
+                    content: '\e80c';
+                    font-family: "fontello";
+                    font-style: inherit;
+                    font-weight: inherit;
+                    speak: none;
+                    display: inline-block;
+                    text-decoration: inherit;
+                    margin-right: 0;
+                    text-align: center;
+                    font-variant: normal;
+                    text-transform: none;
+                    font-size: 100%;
+                    line-height: $btn_height;
+                    width: 100%;
+                    padding-right: 0.2em;
+                }
+            }
         }
     }
 }

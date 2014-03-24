@@ -97,8 +97,13 @@ select {
 }
 
 textarea {
-    min-height: 120px;
-    resize: none;
+    height: $input_height * 2;
+    max-height: 240px;
+    resize: vertical;
+    
+    &:disabled {
+        resize: none;
+    }
 }
 
 

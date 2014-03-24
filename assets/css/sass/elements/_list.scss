@@ -12,8 +12,9 @@
         background: $list_line_bg_color;
         border-top: 1px solid $list_line_border_color;
         color: $list_line_link_color;
-        font-weight: 700;
+        font-weight: 400;
         height: $list_item_height;
+        opacity: 0.7;
         padding: 0;
         position: relative;
         
@@ -46,6 +47,11 @@
             top: 50%;
             
             @include border_radius(3px 0 0 3px);
+        }
+        
+        &.unread {
+            font-weight: 700;
+            opacity: 1;
         }
         
         &.high_priority {

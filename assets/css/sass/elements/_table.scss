@@ -38,12 +38,18 @@
         }
     }
     
-    thead th, tfoot td {
-        padding: $padding_x_small $padding_small;   
+    thead th {
+        padding: $padding_x_small $padding_small; 
     }
     
     tbody {
         tr {
+            &:first-child, &:only-child {
+                td {
+                    border-top: 1px solid $table_border_color; 
+                }
+            }
+            
             td {
                 background: $table_line_bg;
                 padding: $padding_small;
@@ -55,15 +61,57 @@
                 }
             }
             
+            &:first-child {
+                td {
+                    &:first-child {
+                        @include border_radius(4px 0 0 0);
+                    }
+                    
+                    &:last-child {
+                        @include border_radius(0 4px 0 0);
+                    }
+                    
+                    &:only-child {
+                        @include border_radius(4px 4px 0 0);
+                    }
+                }
+            }
+            
             &:last-child {
                 td {
-                    border-bottom: 1px solid $table_bottom_divider_color;   
+                    &:first-child {
+                        @include border_radius(0 0 0 4px);
+                    }
+                    
+                    &:last-child {
+                        @include border_radius(0 0 4px 0);
+                    }
+                    
+                    &:only-child {
+                        @include border_radius(0 0 4px 4px);
+                    }
+                }
+            }
+            
+            &:only-child {
+                td {
+                    &:first-child {
+                        @include border_radius(4px 0 0 4px);
+                    }
+                    
+                    &:last-child {
+                        @include border_radius(0 4px 4px 0);
+                    }
+                    
+                    &:only-child {
+                        @include border_radius(4px);
+                    }
                 }
             }
         }
     }
     
-    & > thead, & > tfoot {
+    & > thead {
         & > tr {
             background: #dfdfdf;
             
@@ -87,6 +135,36 @@
             
             & > td:last-child {
                 @include border_radius(0 0 4px 0);
+            }
+        }
+        
+        & + tbody {
+            tr {
+                &:first-child {
+                    td {
+                        border-top: 0;
+                        
+                        &:first-child, &:last-child {
+                            @include border_radius(0);
+                        }
+                    }
+                }
+                
+                &:only-child {
+                    td {
+                        &:first-child {
+                            @include border_radius(0 0 0 4px);
+                        }
+
+                        &:last-child {
+                            @include border_radius(0 0 4px 0);
+                        }
+
+                        &:only-child {
+                            @include border_radius(0 0 4px 4px);
+                        }
+                    }
+                }
             }
         }
     }

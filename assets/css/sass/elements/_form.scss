@@ -57,6 +57,17 @@ select {
         
         @include linear-gradient(to bottom, top, $select_gradient_color_1, $select_hover_gradient_color_2);   
     }
+    
+    &.error {
+        background: $select_error_gradient_color_1;
+        border-color: $select_error_border_color;
+        
+        @include linear-gradient(to bottom, top, $select_error_gradient_color_1, $select_error_gradient_color_2);
+        
+        &:focus {
+            border-color: $input_error_focus_border_color;
+        }
+    }
 }
 
 .input_rc {

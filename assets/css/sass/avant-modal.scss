@@ -62,7 +62,7 @@
         color: $open_ticket_color;
         font-size: $open_ticket_font_size;
         font-weight: bold;
-        height: $open_ticket_height + 1px;
+        height: $open_ticket_height;
         line-height: $open_ticket_height;
         outline: none;
         padding: 0 $padding_small;
@@ -73,6 +73,7 @@
         @include border-radius(4px 4px 0 0);
         @include linear_gradient(to bottom, top, $open_ticket_bg_color_1, $open_ticket_bg_color_2 130%);
         @include text-shadow(0 1px 0 rgba(0,0,0,0.2));
+        @include transition(all, all, 0.3s ease-in-out);
         
         &::before {
             content: '\e803';
@@ -94,6 +95,10 @@
         
         &:hover {
             @include linear_gradient(to bottom, top, $open_ticket_bg_color_1, darken($open_ticket_bg_color_2, 10%) 130%);
+        }
+        
+        &.hide {
+            bottom: (-$open_ticket_height);
         }
     }
 }

@@ -73,7 +73,7 @@
         @include border-radius(4px 4px 0 0);
         @include linear_gradient(to bottom, top, $open_ticket_bg_color_1, $open_ticket_bg_color_2 130%);
         @include text-shadow(0 1px 0 rgba(0,0,0,0.2));
-        @include transition(all, all, 0.3s ease-in-out);
+        @include transition(all, all, 0.5s ease-in-out);
         
         &::before {
             content: '\e803';
@@ -98,7 +98,7 @@
         }
         
         &.hide {
-            bottom: (-$open_ticket_height);
+            @include transform(translate3d(0,$open_ticket_height,0));
         }
     }
 }
